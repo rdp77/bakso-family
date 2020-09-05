@@ -35,12 +35,11 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-12 text-center">
-                    <img src="images/404.svg" class="img-fluid" alt="">
-                    <div class="text-uppercase mt-4 display-3">Oh ! no</div>
-                    <div class="text-capitalize text-dark mb-4 error-page">Page Not Found</div>
-                    <p class="text-muted para-desc mx-auto">Start working with <span
-                            class="text-primary font-weight-bold">Landrick</span> that can provide everything you need
-                        to generate awareness, drive traffic, connect.</p>
+                    <div class="text-uppercase mt-4 display-3 text-primary">@yield('code')</div>
+                    <div class="text-capitalize text-dark mb-4 error-page">@yield('message')</div>
+                    <p class="text-muted para-desc mx-auto">Jangan berputus asa, <span
+                            class="text-primary font-weight-bold">Error ini hanya sementara</span> dan akan diperbaiki
+                        secepatnya. Anda bisa klik tombol dibawah untuk kembali.</p>
                 </div>
                 <!--end col-->
             </div>
@@ -48,8 +47,7 @@
 
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <a href="index.html" class="btn btn-outline-primary mt-4">Go Back</a>
-                    <a href="index.html" class="btn btn-primary mt-4 ml-2">Go To Home</a>
+                    <a href="/" class="btn btn-primary mt-4 ml-2">Kembali</a>
                 </div>
                 <!--end col-->
             </div>
