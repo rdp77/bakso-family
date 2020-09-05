@@ -1,5 +1,7 @@
 @extends('layouts.auth')
 
+@section('title', __('Bakso Family | Daftar'))
+@section('titleContent', __('Daftar'))
 @section('content')
 <form class="login-form mt-4" method="POST" action="{{ route('register') }}">
     @csrf
