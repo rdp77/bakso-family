@@ -36,7 +36,7 @@
                         <li><a href="changelog.html">Daftar</a></li>
                     </ul>
                 </li>
-                <li><a href="/">Kontak</a></li>
+                <li><a href="{{ route('contact') }}">Kontak</a></li>
             </ul>
             <!--end navigation menu-->
             <div class="buy-menu-btn d-none">
