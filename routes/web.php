@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/kontak', function () {
     return view('pages.contact');
 })->name('contact');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

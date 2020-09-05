@@ -2,7 +2,7 @@
     <div class="container">
         <!-- Logo container-->
         <div>
-            <a class="logo" href="index.html">
+            <a class="logo" href="/">
                 <img src="{{ asset('images/logo-dark.png') }}" height="24" alt="">
             </a>
         </div>
@@ -32,8 +32,17 @@
                 <li class="has-submenu">
                     <a href="javascript:void(0)">Akun</a><span class="menu-arrow"></span>
                     <ul class="submenu">
-                        <li><a href="documentation.html">Masuk</a></li>
-                        <li><a href="changelog.html">Daftar</a></li>
+                        @guest
+                        <li><a href="{{ route('login') }}">Masuk</a></li>
+                        <li><a href="{{ route('register') }}">Daftar</a></li>
+                        @else
+                        <li><a href="#">{{ __('Profil') }}</a></li>
+                        <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                          document.getElementById('logout-form').submit();">{{ __('Keluar') }}</a></li>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                        @endguest
                     </ul>
                 </li>
                 <li><a href="{{ route('contact') }}">Kontak</a></li>
