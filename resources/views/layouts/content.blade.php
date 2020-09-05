@@ -16,13 +16,13 @@
     <link href="{{ asset('css/materialdesignicons.min.css') }}" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
     <!-- Magnific -->
-    <link href="css/magnific-popup.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('css/magnific-popup.css') }}" rel="stylesheet" type="text/css" />
     <!-- FLEXSLIDER -->
     <link href="{{ asset('css/flexslider.css') }}" rel="stylesheet" type="text/css" />
     <!-- Slider -->
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}" />
-    <link href="css/swiper.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('css/swiper.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- Main Css -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css" id="theme-opt" />
     <link href="{{ asset('css/colors/default.css') }}" rel="stylesheet" id="color-opt">
@@ -83,10 +83,10 @@
     <script src="{{ asset('js/jquery.easing.min.js') }}"></script>
     <script src="{{ asset('js/scrollspy.min.js') }}"></script>
     <!-- SLIDER -->
-    <script src="js/owl.carousel.min.js "></script>
-    <script src="js/owl.init.js "></script>
-    <script src="js/swiper.min.js"></script>
-    <script src="js/swiper.init.js"></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('js/owl.init.js') }}"></script>
+    <script src="{{ asset('js/swiper.min.js') }}"></script>
+    <script src="{{ asset('js/swiper.init.js') }}"></script>
     <!--FLEX SLIDER-->
     <script src="{{ asset('js/jquery.flexslider-min.js') }}"></script>
     <script src="{{ asset('js/flexslider.init.js') }}"></script>
