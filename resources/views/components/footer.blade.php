@@ -18,16 +18,15 @@
 
             <div class="col-sm-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
                 <ul class="list-unstyled text-sm-right mb-0">
-                    <li class="list-inline-item"><a href="javascript:void(0)"><img src="images/payments/american-ex.png"
-                                class="avatar avatar-ex-sm" title="American Express" alt=""></a></li>
-                    <li class="list-inline-item"><a href="javascript:void(0)"><img src="images/payments/discover.png"
-                                class="avatar avatar-ex-sm" title="Discover" alt=""></a></li>
-                    <li class="list-inline-item"><a href="javascript:void(0)"><img src="images/payments/master-card.png"
-                                class="avatar avatar-ex-sm" title="Master Card" alt=""></a></li>
-                    <li class="list-inline-item"><a href="javascript:void(0)"><img src="images/payments/paypal.png"
-                                class="avatar avatar-ex-sm" title="Paypal" alt=""></a></li>
-                    <li class="list-inline-item"><a href="javascript:void(0)"><img src="images/payments/visa.png"
-                                class="avatar avatar-ex-sm" title="Visa" alt=""></a></li>
+                    <li class="list-inline-item"><a href="javascript:void(0)"><img
+                                src="{{ asset('images/payments/gopay.png') }}" class="avatar avatar-ex-sm" title="GoPay"
+                                alt=""></a></li>
+                    <li class="list-inline-item"><a href="javascript:void(0)"><img
+                                src="{{ asset('images/payments/ovo.png') }}" class="avatar avatar-ex-sm" title="OVO"
+                                alt=""></a></li>
+                    <li class="list-inline-item"><a href="javascript:void(0)"><img
+                                src="{{ asset('images/payments/linkaja.svg') }}" class="avatar avatar-ex-sm"
+                                title="Link Aja" alt=""></a></li>
                 </ul>
             </div>
             <!--end col-->

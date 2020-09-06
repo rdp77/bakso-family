@@ -37,6 +37,14 @@ Route::get('/checkout', function () {
     return view('pages.checkout');
 })->name('checkout');
 
+Route::get('/profile', function () {
+    return view('pages.userProfile');
+})->name('profile');
+
+Route::get('/profilesettings', function () {
+    return view('pages.usersettings');
+})->name('profilesettings');
+
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@dashboard')->name('home');

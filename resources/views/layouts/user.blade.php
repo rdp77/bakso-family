@@ -23,8 +23,6 @@
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}" />
     <link href="{{ asset('css/swiper.min.css') }}" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="{{ asset('css/slick.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/slick-theme.css') }}" />
     <!-- Main Css -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css" id="theme-opt" />
     <link href="{{ asset('css/colors/default.css') }}" rel="stylesheet" id="color-opt">
@@ -34,42 +32,6 @@
     @include('components.loader')
 
     @include('components.header')
-
-    <section class="bg-half bg-light d-table w-100">
-        <div class="bg-overlay bg-overlay-white"></div>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-12 text-center">
-                    <div class="page-next-level">
-                        <h4 class="title">@yield('titleContent')</h4>
-                        <div class="page-next">
-                            <nav aria-label="breadcrumb" class="d-inline-block">
-                                <ul class="breadcrumb bg-white rounded shadow mb-0">
-                                    <li class="breadcrumb-item"><a href="/">Beranda</a></li>
-                                    @yield('breadcrumb')
-                                    <li class="breadcrumb-item active" aria-current="page">@yield('titleContent')</li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-                <!--end col-->
-            </div>
-            <!--end row-->
-        </div>
-        <!--end container-->
-    </section>
-    <!--end section-->
-
-    <!-- Shape Start -->
-    <div class="position-relative">
-        <div class="shape overflow-hidden text-white">
-            <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
-            </svg>
-        </div>
-    </div>
-    <!--Shape End-->
 
     @yield('content')
 
@@ -90,8 +52,6 @@
     <script src="{{ asset('js/owl.init.js') }}"></script>
     <script src="{{ asset('js/swiper.min.js') }}"></script>
     <script src="{{ asset('js/swiper.init.js') }}"></script>
-    <script src="{{ asset('js/slick.min.js') }}"></script>
-    <script src="{{ asset('js/slick.init.js') }}"></script>
     <!--FLEX SLIDER-->
     <script src="{{ asset('js/jquery.flexslider-min.js') }}"></script>
     <script src="{{ asset('js/flexslider.init.js') }}"></script>
@@ -103,19 +63,6 @@
     <script src="https://unicons.iconscout.com/release/v2.1.9/script/monochrome/bundle.js"></script>
     <!-- Main Js -->
     <script src="{{ asset('js/app.js') }}"></script>
-    <!-- Quantity Plus Minus JS -->
-    <script>
-        $('.plus').click(function () {
-                    if ($(this).prev().val() < 999) {
-                        $(this).prev().val(+$(this).prev().val() + 1);
-                    }
-                });
-                $('.minus').click(function () {
-                    if ($(this).next().val() > 1) {
-                        if ($(this).next().val() > 1) $(this).next().val(+$(this).next().val() - 1);
-                    }
-                });
-    </script>
 </body>
 
 </html>

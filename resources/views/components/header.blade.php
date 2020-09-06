@@ -36,12 +36,15 @@
                         <li><a href="{{ route('login') }}">Masuk</a></li>
                         <li><a href="{{ route('register') }}">Daftar</a></li>
                         @else
-                        <li><a href="#">{{ __('Profil') }}</a></li>
+                        <li><a href="{{ route('profile') }}">{{ __('Profil') }}</a></li>
                         <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
                                           document.getElementById('logout-form').submit();">{{ __('Keluar') }}</a></li>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
                         </form>
+                        @if (Auth::user()->admin == '1')
+                        <li><a href="{{ route('home') }}">{{ __('Dashboard') }}</a></li>
+                        @endif
                         @endguest
                     </ul>
                 </li>
