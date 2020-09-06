@@ -29,6 +29,14 @@ Route::get('/details', function () {
     return view('pages.shopDetails');
 })->name('shopdetails');
 
+Route::get('/cart', function () {
+    return view('pages.cart');
+})->name('cart');
+
+Route::get('/checkout', function () {
+    return view('pages.checkout');
+})->name('checkout');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

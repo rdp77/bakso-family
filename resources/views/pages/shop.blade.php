@@ -136,7 +136,7 @@
                         @guest
                         {{ route('login') }}
                         @else
-                        {{ route('shop') }}
+                        {{ route('cart') }}
                         @endguest
                         " class="btn btn-primary"><i class="mdi mdi-cart"></i>Keranjang</a>
                     </div>
