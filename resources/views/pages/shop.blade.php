@@ -128,6 +128,18 @@
                     </div>
                     <!--end col-->
 
+                    {{-- <div class="section-title btn-sm btn-primary">
+                        <h5 class="mb-0"><i class="mdi mdi-cart"></i>Checkout</h5>
+                    </div> --}}
+                    <div class="buy-menu-btn">
+                        <a href="
+                        @guest
+                        {{ route('login') }}
+                        @else
+                        {{ route('shop') }}
+                        @endguest
+                        " class="btn btn-primary"><i class="mdi mdi-cart"></i>Keranjang</a>
+                    </div>
                     {{-- <div class="col-lg-3 col-md-5 mt-4 mt-sm-0 pt-2 pt-sm-0">
                         <div class="form custom-form">
                             <div class="form-group mb-0">
@@ -155,9 +167,9 @@
                                     <img src="images/shop/product/s-1.jpg" class="img-fluid" alt="">
                                 </a>
                                 <ul class="list-unstyled shop-icons">
-                                    <li class="mt-2"><a href="shop-product-detail.html"
+                                    <li class="mt-2"><a href="{{ route('shopdetails') }}"
                                             class="btn btn-icon btn-pills btn-soft-primary"><svg
-                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                xmlns="https://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                                 stroke-linecap="round" stroke-linejoin="round"
                                                 class="feather feather-eye icons">
@@ -166,7 +178,7 @@
                                             </svg></a></li>
                                     <li class="mt-2"><a href="shop-cart.html"
                                             class="btn btn-icon btn-pills btn-soft-warning"><svg
-                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                xmlns="https://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                                 stroke-linecap="round" stroke-linejoin="round"
                                                 class="feather feather-shopping-cart icons">
@@ -198,9 +210,9 @@
                                     <img src="images/shop/product/s-2.jpg" class="img-fluid" alt="">
                                 </a>
                                 <ul class="list-unstyled shop-icons">
-                                    <li class="mt-2"><a href="shop-product-detail.html"
+                                    <li class="mt-2"><a href="{{ route('shopdetails') }}"
                                             class="btn btn-icon btn-pills btn-soft-primary"><svg
-                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                xmlns="https://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                                 stroke-linecap="round" stroke-linejoin="round"
                                                 class="feather feather-eye icons">
@@ -209,7 +221,7 @@
                                             </svg></a></li>
                                     <li class="mt-2"><a href="shop-cart.html"
                                             class="btn btn-icon btn-pills btn-soft-warning"><svg
-                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                xmlns="https://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                                 stroke-linecap="round" stroke-linejoin="round"
                                                 class="feather feather-shopping-cart icons">
@@ -243,7 +255,7 @@
                                 <ul class="list-unstyled shop-icons">
                                     <li class="mt-2"><a href="shop-product-detail.html"
                                             class="btn btn-icon btn-pills btn-soft-primary"><svg
-                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                xmlns="https://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                                 stroke-linecap="round" stroke-linejoin="round"
                                                 class="feather feather-eye icons">
@@ -252,7 +264,7 @@
                                             </svg></a></li>
                                     <li class="mt-2"><a href="shop-cart.html"
                                             class="btn btn-icon btn-pills btn-soft-warning"><svg
-                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                xmlns="https://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                                 stroke-linecap="round" stroke-linejoin="round"
                                                 class="feather feather-shopping-cart icons">
