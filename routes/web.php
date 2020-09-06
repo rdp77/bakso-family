@@ -17,9 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/kontak', function () {
+Route::get('/contact', function () {
     return view('pages.contact');
 })->name('contact');
+
+Route::get('/shop', function () {
+    return view('pages.shop');
+})->name('shop');
 
 Auth::routes();
 

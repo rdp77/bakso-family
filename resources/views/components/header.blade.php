@@ -7,7 +7,7 @@
             </a>
         </div>
         <div class="buy-button">
-            <a href="/" target="_blank" class="btn btn-primary">{{ __('Beli Sekarang') }}</a>
+            <a href="{{ route('shop') }}" class="btn btn-primary">{{ __('Beli Sekarang') }}</a>
         </div>
         <!--end login button-->
         <!-- End Logo container-->
@@ -49,7 +49,7 @@
             </ul>
             <!--end navigation menu-->
             <div class="buy-menu-btn d-none">
-                <a href="/" target="_blank" class="btn btn-primary">Buy Now</a>
+                <a href="{{ route('shop') }}" class="btn btn-primary">Buy Now</a>
             </div>
             <!--end login button-->
         </div>
