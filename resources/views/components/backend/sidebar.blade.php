@@ -12,8 +12,7 @@
                 <a href="{{ route('home') }}" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
             </li>
             <li class="nav-item dropdown">
-                <a href="#" class="nav-link"><i class="far fa-user"></i> <span>Management
-                        User</span></a>
+                <a href="#" class="nav-link"><i class="far fa-user"></i> <span>Manajemen Pengguna</span></a>
             </li>
             <li class="nav-item dropdown">
                 <a href="{{ route('product') }}" class="nav-link"><i class="fas fa-th"></i>

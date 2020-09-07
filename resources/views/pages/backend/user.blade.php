@@ -1,13 +1,13 @@
 @extends('layouts.backend.view')
 
 @section('title', __('Bakso Family Dashboard'))
-@section('breadcrumb', __('Data Produk'))
-@section('titleContent', __('Data Produk'))
+@section('breadcrumb', __('Data Pengguna'))
+@section('titleContent', __('Data Pengguna'))
 @section('content')
 <div class="card">
     <div class="card-header">
         <a href="{{ route('create') }}" class="btn btn-icon icon-left btn-primary"><i class="far fa-edit"></i>
-            Buat Produk</a>
+            Buat Pengguna</a>
     </div>
     <div class="card-body">
         <div class="table-responsive">

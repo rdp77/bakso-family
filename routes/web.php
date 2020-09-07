@@ -17,9 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/contact', function () {
-    return view('pages.contact');
-})->name('contact');
+// Front End Page
+Route::get('/contact', 'HomeController@contact')->name('contact');
 
 Route::get('/shop', function () {
     return view('pages.shop');
@@ -45,10 +44,12 @@ Route::get('/profilesettings', function () {
     return view('pages.usersettings');
 })->name('profilesettings');
 
-Route::get('/product', function () {
-    return view('pages.backend.product');
-})->name('product');
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@dashboard')->name('home');
+
+// Product
+Route::get('/product', 'ProductController@index')->name('product');
+Route::get('/create', 'ProductController@create')->name('create');
+
+// User
