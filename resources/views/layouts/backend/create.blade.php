@@ -46,9 +46,16 @@
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
     <script src="{{ asset('js/stisla.js') }}"></script>
+    <script src="{{ asset('js/cleave.min.js') }}"></script>
     <!-- Template JS File -->
     <script src="{{ asset('js/scripts.js') }}"></script>
     <script src="{{ asset('js/custom.js') }}"></script>
+    <script>
+        var cleaveC = new Cleave('.currency', {
+            numeral: true,
+            numeralThousandsGroupStyle: 'thousand'
+        });
+    </script>
 </body>
 
 </html>

@@ -2,17 +2,18 @@
 
 @section('title', __('Bakso Family Dashboard'))
 @section('breadcrumb', __('Data Produk'))
-@section('breadcrumb2', __('Buat Produk'))
-@section('titleContent', __('Buat Produk'))
+@section('breadcrumb2', __('Edit Produk'))
+@section('titleContent', __('Edit Produk'))
 @section('content')
 <div class="card">
-    <form method="POST" action="/product/store">
+    <form method="POST" action="/product/update/{{ $product->id }}">
         @csrf
+        @method('PUT')
         <div class="card-body">
             <div class="form-group">
                 <label for="name">Nama</label>
                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name"
-                    required autofocus>
+                    required autofocus value="{{ $product->name }}">
                 @error('name')
                 <span class="text-danger" role="alert">
                     {{ $message }}
@@ -28,7 +29,7 @@
                         </div>
                     </div>
                     <input id="price" name="price" type="text" class="form-control @error('name') is-invalid @enderror"
-                        required>
+                        required value="{{ $product->price }}">
                 </div>
                 @error('price')
                 <span class="text-danger" role="alert">
@@ -43,7 +44,6 @@
         </div>
         <div class="card-footer text-right">
             <button class="btn btn-primary mr-1" type="submit">Submit</button>
-            <button class="btn btn-secondary" type="reset">Reset</button>
         </div>
     </form>
 </div>

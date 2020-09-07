@@ -51,5 +51,9 @@ Route::get('/home', 'HomeController@dashboard')->name('home');
 // Product
 Route::get('/product', 'ProductController@index')->name('product');
 Route::get('/create', 'ProductController@create')->name('create');
+Route::post('/product/store', 'ProductController@store');
+Route::get('/product/edit/{id}', 'ProductController@edit');
+Route::put('/product/update/{id}', 'ProductController@update');
+Route::get('/product/delete/{id}', 'ProductController@delete');
 
 // User
