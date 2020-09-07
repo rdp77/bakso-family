@@ -9,7 +9,7 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>Total Orders</h4>
+                            <h4>Total Pesanan</h4>
                         </div>
                         <div class="card-body">
                             59
@@ -24,7 +24,7 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>Balance</h4>
+                            <h4>Pemasukan</h4>
                         </div>
                         <div class="card-body">
                             $187,13
@@ -39,7 +39,7 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>Sales</h4>
+                            <h4>Jumlah Pembeli</h4>
                         </div>
                         <div class="card-body">
                             4,732
@@ -50,20 +50,17 @@
         </div>
         <div class="card">
             <div class="card-header">
-                <h4>Invoices</h4>
-                <div class="card-header-action">
-                    <a href="#" class="btn btn-danger">View More <i class="fas fa-chevron-right"></i></a>
-                </div>
+                <h4>Request Order</h4>
             </div>
             <div class="card-body p-0">
                 <div class="table-responsive table-invoice">
                     <table class="table table-striped">
                         <tr>
-                            <th>Invoice ID</th>
-                            <th>Customer</th>
+                            <th>ID</th>
+                            <th>Nama Pembeli</th>
                             <th>Status</th>
-                            <th>Due Date</th>
-                            <th>Action</th>
+                            <th>Tanggal</th>
+                            <th>Aksi</th>
                         </tr>
                         <tr>
                             <td><a href="#">INV-87239</a></td>
@@ -73,7 +70,7 @@
                             </td>
                             <td>July 19, 2018</td>
                             <td>
-                                <a href="#" class="btn btn-primary">Detail</a>
+                                <a href="#" class="btn btn-primary">Terima</a>
                             </td>
                         </tr>
                         <tr>
@@ -84,29 +81,29 @@
                             </td>
                             <td>July 21, 2018</td>
                             <td>
-                                <a href="#" class="btn btn-primary">Detail</a>
+                                <a href="#" class="btn btn-primary disabled">Terima</a>
                             </td>
                         </tr>
                         <tr>
                             <td><a href="#">INV-76824</a></td>
                             <td class="font-weight-600">Muhamad Nuruzzaki</td>
                             <td>
-                                <div class="badge badge-warning">Unpaid</div>
+                                <div class="badge badge-success">Paid</div>
                             </td>
                             <td>July 22, 2018</td>
                             <td>
-                                <a href="#" class="btn btn-primary">Detail</a>
+                                <a href="#" class="btn btn-primary disabled">Terima</a>
                             </td>
                         </tr>
                         <tr>
                             <td><a href="#">INV-84990</a></td>
                             <td class="font-weight-600">Agung Ardiansyah</td>
                             <td>
-                                <div class="badge badge-warning">Unpaid</div>
+                                <div class="badge badge-success">Paid</div>
                             </td>
                             <td>July 22, 2018</td>
                             <td>
-                                <a href="#" class="btn btn-primary">Detail</a>
+                                <a href="#" class="btn btn-primary disabled">Terima</a>
                             </td>
                         </tr>
                         <tr>
@@ -117,7 +114,7 @@
                             </td>
                             <td>July 28, 2018</td>
                             <td>
-                                <a href="#" class="btn btn-primary">Detail</a>
+                                <a href="#" class="btn btn-primary disabled">Terima</a>
                             </td>
                         </tr>
                     </table>

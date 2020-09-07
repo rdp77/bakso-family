@@ -45,6 +45,10 @@ Route::get('/profilesettings', function () {
     return view('pages.usersettings');
 })->name('profilesettings');
 
+Route::get('/product', function () {
+    return view('pages.backend.product');
+})->name('product');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@dashboard')->name('home');
