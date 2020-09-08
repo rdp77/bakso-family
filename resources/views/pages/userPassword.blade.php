@@ -59,87 +59,62 @@
     <div class="container mt-lg-3">
         <div class="card border-0 rounded shadow">
             <div class="card-body">
-                <h5 class="text-md-left text-center">Ganti Data :</h5>
-
-                <div class="mt-3 text-md-left text-center d-sm-flex">
-                    <img src="images/client/05.jpg"
-                        class="avatar float-md-left avatar-medium rounded-circle shadow mr-md-4" alt="">
-                    <div class="mt-md-4 mt-3 mt-sm-0">
-                        <a href="javascript:void(0)" class="btn btn-primary mt-2">Change Picture</a>
-                    </div>
-                </div>
-
+                <h5 class="text-md-left text-center">Ganti Password :</h5>
                 <form>
                     <div class="row mt-4">
-                        <div class="col-md-6">
+                        <div class="col-lg-12">
                             <div class="form-group position-relative">
-                                <label>Nama</label>
-                                <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                <label>Old password :</label>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-user fea icon-sm icons">
-                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                                    <circle cx="12" cy="7" r="4"></circle>
-                                </svg>
-                                <input name="name" id="first" type="text" class="form-control pl-5"
-                                    placeholder="First Name :">
-                            </div>
-                        </div>
-                        <!--end col-->
-                        <div class="col-md-6">
-                            <div class="form-group position-relative">
-                                <label>Alamat</label>
-                                <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-bookmark fea icon-sm icons">
-                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
-                                </svg>
-                                <input name="name" id="last" type="text" class="form-control pl-5"
-                                    placeholder="Last Name :">
-                            </div>
-                        </div>
-                        <!--end col-->
-                        <div class="col-md-6">
-                            <div class="form-group position-relative">
-                                <label>Email</label>
-                                <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-mail fea icon-sm icons">
+                                    stroke-linejoin="round" class="feather feather-key fea icon-sm icons">
                                     <path
-                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                                    </path>
-                                    <polyline points="22,6 12,13 2,6"></polyline>
-                                </svg>
-                                <input name="email" id="email" type="email" class="form-control pl-5"
-                                    placeholder="Your email :">
-                            </div>
-                        </div>
-                        <!--end col-->
-                        <div class="col-md-6">
-                            <div class="form-group position-relative">
-                                <label>No Telepon</label>
-                                <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-phone fea icon-sm icons">
-                                    <path
-                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                        d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4">
                                     </path>
                                 </svg>
-                                <input name="name" id="occupation" type="text" class="form-control pl-5"
-                                    placeholder="Occupation :">
+                                <input type="password" class="form-control pl-5" placeholder="Old password" required="">
                             </div>
                         </div>
                         <!--end col-->
-                    </div>
-                    <!--end row-->
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <input type="submit" id="submit" name="send" class="btn btn-primary" value="Save Changes">
+
+                        <div class="col-lg-12">
+                            <div class="form-group position-relative">
+                                <label>New password :</label>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-key fea icon-sm icons">
+                                    <path
+                                        d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4">
+                                    </path>
+                                </svg>
+                                <input type="password" class="form-control pl-5" placeholder="New password" required="">
+                            </div>
+                        </div>
+                        <!--end col-->
+
+                        <div class="col-lg-12">
+                            <div class="form-group position-relative">
+                                <label>Re-type New password :</label>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-key fea icon-sm icons">
+                                    <path
+                                        d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4">
+                                    </path>
+                                </svg>
+                                <input type="password" class="form-control pl-5" placeholder="Re-type New password"
+                                    required="">
+                            </div>
+                        </div>
+                        <!--end col-->
+
+                        <div class="col-lg-12 mt-2 mb-0">
+                            <button class="btn btn-primary">Save password</button>
                         </div>
                         <!--end col-->
                     </div>
                     <!--end row-->
                 </form>
-                <!--end form-->
             </div>
         </div>
     </div>

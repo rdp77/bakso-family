@@ -1,6 +1,6 @@
 @extends('layouts.user')
 
-@section('title', __('Bakso Family | User Profile'))
+@section('title', __('Bakso Family | User Settings'))
 @section('content')
 <!-- Hero Start -->
 <section class="bg-profile d-table w-100 bg-light">
@@ -31,23 +31,11 @@
                                     <!--end col-->
                                     <div class="col-md-5 text-md-right text-center">
                                         <ul class="list-unstyled social-icon social mb-0 mt-4">
-                                            <li class="list-inline-item"><a href="{{ route('statusUser') }}"
+                                            <li class="list-inline-item"><a href="{{ route('profile') }}"
                                                     class="rounded" data-toggle="tooltip" data-placement="bottom"
-                                                    title="Status"><i data-feather="info"
+                                                    title="Kembali"><i data-feather="arrow-left"
                                                         class="fea icon-sm fea-social"></i></a>
                                             </li>
-                                            <li class="list-inline-item"><a href="{{ route('historyUser') }}"
-                                                    class="rounded" data-toggle="tooltip" data-placement="bottom"
-                                                    title="Riwayat"><i data-feather="rotate-ccw"
-                                                        class="fea icon-sm fea-social"></i></a></li>
-                                            <li class="list-inline-item"><a href="{{ route('passwordUser') }}"
-                                                    class="rounded" data-toggle="tooltip" data-placement="bottom"
-                                                    title="Ubah Password"><i data-feather="key"
-                                                        class="fea icon-sm fea-social"></i></a></li>
-                                            <li class="list-inline-item"><a href="{{ route('profilesettings') }}"
-                                                    class="rounded" data-toggle="tooltip" data-placement="bottom"
-                                                    title="Pengaturan"><i data-feather="tool"
-                                                        class="fea icon-sm fea-social"></i></a></li>
                                         </ul>
                                         <!--end icon-->
                                     </div>
@@ -73,36 +61,20 @@
 <!-- Profile Start -->
 <section class="section mt-60">
     <div class="container mt-lg-3">
-        <!--end col-->
+        <div class="card border-0 rounded shadow">
+            <div class="card-body">
+                <h5 class="text-md-left text-center">Riwayat Pemesanan :</h5>
 
-        <div class="pb-4">
-            <h5>Detail :</h5>
-            <div class="mt-4">
-                <div class="media align-items-center">
-                    <i data-feather="mail" class="fea icon-ex-md text-muted mr-3"></i>
-                    <div class="media-body">
-                        <h6 class="text-primary mb-0">Email :</h6>
-                        <a href="javascript:void(0)" class="text-muted">kristajoseph0203@mail.com</a>
-                    </div>
-                </div>
-                <div class="media align-items-center mt-3">
-                    <i data-feather="map-pin" class="fea icon-ex-md text-muted mr-3"></i>
-                    <div class="media-body">
-                        <h6 class="text-primary mb-0">Alamat :</h6>
-                        <a href="javascript:void(0)" class="text-muted">Beijing, China</a>
-                    </div>
-                </div>
-                <div class="media align-items-center mt-3">
-                    <i data-feather="phone" class="fea icon-ex-md text-muted mr-3"></i>
-                    <div class="media-body">
-                        <h6 class="text-primary mb-0">No Telepon :</h6>
-                        <a href="javascript:void(0)" class="text-muted">(+12) 1254-56-4896</a>
+                <div class="media key-feature align-items-center p-3 rounded shadow mt-4">
+                    <div class="media-body content ml-3">
+                        <h4 class="title mb-0">29 - 08 - 2020</h4>
+                        <p class="text-muted mb-0">3 Years Experience</p>
+                        <p class="text-muted mb-0"><a href="javascript:void(0)" class="text-primary">CircleCi</a>
+                            @London, UK</p>
                     </div>
                 </div>
             </div>
         </div>
-        <!--end row-->
-        <!--end row-->
     </div>
     <!--end container-->
 </section>

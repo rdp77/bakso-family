@@ -1,8 +1,10 @@
-@extends('layouts.backend.create')
+@extends('layouts.backend.crud')
 
 @section('title', __('Bakso Family Dashboard'))
 @section('breadcrumb', __('Data Produk'))
-@section('breadcrumb2', __('Edit Produk'))
+@section('morebreadcrumb')
+<div class="breadcrumb-item">{{ __('Edit Produk') }}</div>
+@endsection
 @section('titleContent', __('Edit Produk'))
 @section('content')
 <div class="card">

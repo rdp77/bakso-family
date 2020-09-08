@@ -1,4 +1,4 @@
-@extends('layouts.backend.create')
+@extends('layouts.backend.crud')
 
 @section('title', __('Bakso Family Dashboard'))
 @section('breadcrumb', __('Data Pengguna'))

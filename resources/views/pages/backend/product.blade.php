@@ -1,4 +1,4 @@
-@extends('layouts.backend.view')
+@extends('layouts.backend.crud')
 
 @section('title', __('Bakso Family Dashboard'))
 @section('breadcrumb', __('Data Produk'))
@@ -23,10 +23,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($product as $p)
+                    @foreach($product as $number => $p)
                     <tr>
                         <td class="text-center">
-                            {{ $p->id }}
+                            {{ $number+1 }}
                         </td>
                         <td>{{ $p->name }}</td>
                         <td>Rp. {{ number_format($p->price) }}</td>
@@ -37,7 +37,7 @@
                             <a href="/product/edit/{{ $p->id }}" class="btn btn-primary btn-action mb-1 mt-1 mr-1"
                                 data-toggle="tooltip" title="Edit"><i class="fas fa-pencil-alt"></i></a>
                             <a class="btn btn-danger btn-action mb-1 mt-1" data-toggle="tooltip" title="Delete"
-                                data-confirm="Are You Sure?|This action can not be undone. Do you want to continue?"
+                                data-confirm="Apakah Anda Yakin?|Aksi ini tidak dapat dikembalikan. Apakah ingin melanjutkan?"
                                 data-confirm-yes="window.open('/product/delete/{{ $p->id }}','_self')"><i
                                     class="fas fa-trash"></i></a>
                         </td>

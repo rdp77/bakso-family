@@ -18,7 +18,10 @@ Route::get('/', function () {
 });
 
 // Front End Page
-Route::get('/contact', 'HomeController@contact')->name('contact');
+
+Route::get('/contact', function () {
+    return view('pages.contact');
+})->name('contact');
 
 Route::get('/shop', function () {
     return view('pages.shop');
@@ -28,9 +31,7 @@ Route::get('/details', function () {
     return view('pages.shopDetails');
 })->name('shopdetails');
 
-Route::get('/cart', function () {
-    return view('pages.cart');
-})->name('cart');
+Route::get('/cart', 'HomeController@cart')->name('cart');
 
 Route::get('/checkout', function () {
     return view('pages.checkout');
@@ -48,6 +49,13 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@dashboard')->name('home');
 
+// User Front End
+// Route::get('/user/create', 'UserController@create')->name('createUser');
+// Route::post('/user/store', 'UserController@store');
+Route::get('/history', 'UserController@history')->name('historyUser');
+Route::get('/status', 'UserController@status')->name('statusUser');
+Route::get('/changepass', 'UserController@password')->name('passwordUser');
+
 // Product
 Route::get('/product', 'ProductController@index')->name('product');
 Route::get('/product/create', 'ProductController@create')->name('createProduct');
@@ -58,7 +66,7 @@ Route::get('/product/delete/{id}', 'ProductController@delete');
 
 // User
 Route::get('/user', 'UserController@index')->name('user');
-Route::get('/user/create', 'UserController@create')->name('userCreate');
+Route::get('/user/create', 'UserController@create')->name('createUser');
 Route::post('/user/store', 'UserController@store');
 Route::get('/user/edit/{id}', 'UserController@edit');
 Route::put('/user/update/{id}', 'UserController@update');

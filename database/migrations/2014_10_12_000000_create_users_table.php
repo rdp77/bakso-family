@@ -22,7 +22,9 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
             $table->string('address')->nullable();
+            $table->integer('tlp')->nullable();
             $table->boolean('admin');
+            $table->string('image')->nullable();
         });
     }
 

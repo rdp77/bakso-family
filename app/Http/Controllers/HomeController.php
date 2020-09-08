@@ -29,12 +29,13 @@ class HomeController extends Controller
 
     public function dashboard()
     {
-
+        // $count = Product::sum('id');
+        // dd($count);
         return view('home');
     }
 
-    public function contact()
+    public function cart()
     {
-        return view('pages.contact');
+        return view('pages.cart');
     }
 }
