@@ -27,8 +27,8 @@
                             Rp.
                         </div>
                     </div>
-                    <input id="price" name="price" type="text" class="form-control @error('name') is-invalid @enderror"
-                        required>
+                    <input id="price" name="price" type="text"
+                        class="form-control currency @error('name') is-invalid @enderror" required>
                 </div>
                 @error('price')
                 <span class="text-danger" role="alert">

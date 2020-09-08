@@ -20,7 +20,13 @@
                                 <div class="row align-items-end">
                                     <div class="col-md-7 text-md-left text-center mt-4 mt-sm-0">
                                         <h3 class="title mb-0">Krista Joseph</h3>
-                                        <small class="text-muted h6 mr-2">Pembeli</small>
+                                        <small class="text-muted h6 mr-2">
+                                            @if (Auth::User()->admin == '1')
+                                            Pemilik
+                                            @else
+                                            Pembeli
+                                            @endif
+                                        </small>
                                     </div>
                                     <!--end col-->
                                     <div class="col-md-5 text-md-right text-center">
@@ -69,7 +75,7 @@
         <!--end col-->
 
         <div class="pb-4">
-            <h5>Personal Details :</h5>
+            <h5>Detail :</h5>
             <div class="mt-4">
                 <div class="media align-items-center">
                     <i data-feather="mail" class="fea icon-ex-md text-muted mr-3"></i>
@@ -79,47 +85,16 @@
                     </div>
                 </div>
                 <div class="media align-items-center mt-3">
-                    <i data-feather="bookmark" class="fea icon-ex-md text-muted mr-3"></i>
-                    <div class="media-body">
-                        <h6 class="text-primary mb-0">Skills :</h6>
-                        <a href="javascript:void(0)" class="text-muted">html</a>, <a href="javascript:void(0)"
-                            class="text-muted">css</a>, <a href="javascript:void(0)" class="text-muted">js</a>, <a
-                            href="javascript:void(0)" class="text-muted">mysql</a>
-                    </div>
-                </div>
-                <div class="media align-items-center mt-3">
-                    <i data-feather="italic" class="fea icon-ex-md text-muted mr-3"></i>
-                    <div class="media-body">
-                        <h6 class="text-primary mb-0">Language :</h6>
-                        <a href="javascript:void(0)" class="text-muted">English</a>, <a href="javascript:void(0)"
-                            class="text-muted">Japanese</a>, <a href="javascript:void(0)" class="text-muted">Chinese</a>
-                    </div>
-                </div>
-                <div class="media align-items-center mt-3">
-                    <i data-feather="globe" class="fea icon-ex-md text-muted mr-3"></i>
-                    <div class="media-body">
-                        <h6 class="text-primary mb-0">Website :</h6>
-                        <a href="javascript:void(0)" class="text-muted">www.kristajoseph.com</a>
-                    </div>
-                </div>
-                <div class="media align-items-center mt-3">
-                    <i data-feather="gift" class="fea icon-ex-md text-muted mr-3"></i>
-                    <div class="media-body">
-                        <h6 class="text-primary mb-0">Birthday :</h6>
-                        <p class="text-muted mb-0">2nd March, 1996</p>
-                    </div>
-                </div>
-                <div class="media align-items-center mt-3">
                     <i data-feather="map-pin" class="fea icon-ex-md text-muted mr-3"></i>
                     <div class="media-body">
-                        <h6 class="text-primary mb-0">Location :</h6>
+                        <h6 class="text-primary mb-0">Alamat :</h6>
                         <a href="javascript:void(0)" class="text-muted">Beijing, China</a>
                     </div>
                 </div>
                 <div class="media align-items-center mt-3">
                     <i data-feather="phone" class="fea icon-ex-md text-muted mr-3"></i>
                     <div class="media-body">
-                        <h6 class="text-primary mb-0">Cell No :</h6>
+                        <h6 class="text-primary mb-0">No Telepon :</h6>
                         <a href="javascript:void(0)" class="text-muted">(+12) 1254-56-4896</a>
                     </div>
                 </div>

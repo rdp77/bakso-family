@@ -40,9 +40,11 @@ class ProductController extends Controller
             'price' => 'required',
         ]);
 
+        $newprice = str_replace(',', '', $req->price);
+
         Product::create([
             'name' => $req->name,
-            'price' => $req->price
+            'price' => $newprice
         ]);
 
         return redirect('/product');
