@@ -56,18 +56,21 @@ Route::get('/history', 'UserController@history')->name('historyUser');
 Route::get('/status', 'UserController@status')->name('statusUser');
 Route::get('/changepass', 'UserController@password')->name('passwordUser');
 
-// Product
-Route::get('/product', 'ProductController@index')->name('product');
-Route::get('/product/create', 'ProductController@create')->name('createProduct');
-Route::post('/product/store', 'ProductController@store');
-Route::get('/product/edit/{id}', 'ProductController@edit');
-Route::put('/product/update/{id}', 'ProductController@update');
-Route::get('/product/delete/{id}', 'ProductController@delete');
+// Check Role
+Route::group(['middleware' => 'roles'], function () {
+    // Product
+    Route::get('/product', 'ProductController@index')->name('product');
+    Route::get('/product/create', 'ProductController@create')->name('createProduct');
+    Route::post('/product/store', 'ProductController@store');
+    Route::get('/product/edit/{id}', 'ProductController@edit');
+    Route::put('/product/update/{id}', 'ProductController@update');
+    Route::get('/product/delete/{id}', 'ProductController@delete');
 
-// User
-Route::get('/user', 'UserController@index')->name('user');
-Route::get('/user/create', 'UserController@create')->name('createUser');
-Route::post('/user/store', 'UserController@store');
-Route::get('/user/edit/{id}', 'UserController@edit');
-Route::put('/user/update/{id}', 'UserController@update');
-Route::get('/user/delete/{id}', 'UserController@delete');
+    // User
+    Route::get('/user', 'UserController@index')->name('user');
+    Route::get('/user/create', 'UserController@create')->name('createUser');
+    Route::post('/user/store', 'UserController@store');
+    Route::get('/user/edit/{id}', 'UserController@edit');
+    Route::put('/user/update/{id}', 'UserController@update');
+    Route::get('/user/delete/{id}', 'UserController@delete');
+});
