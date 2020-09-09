@@ -41,6 +41,15 @@
             <div class="form-group">
                 <label>File</label>
                 <input type="file" class="form-control">
+                @error('price')
+                <span class="text-danger" role="alert">
+                    {{ $message }}
+                </span>
+                @else
+                <span class="text-dark" role="alert">
+                    Ukuran rekomendasi 400x500
+                </span>
+                @enderror
             </div>
         </div>
         <div class="card-footer text-right">
