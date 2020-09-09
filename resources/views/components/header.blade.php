@@ -42,7 +42,7 @@
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
                         </form>
-                        @if (Auth::user()->admin == '1')
+                        @if (Auth::user()->admin == 'TRUE')
                         <li><a href="{{ route('home') }}">{{ __('Dashboard') }}</a></li>
                         @endif
                         @endguest
