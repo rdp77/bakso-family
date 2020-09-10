@@ -22,12 +22,13 @@
                         <th>No Telepon</th>
                         <th>Email</th>
                         <th>Total Pesanan</th>
+                        <th>Status</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach ( $user as $number => $u )
                     <tr>
-                        @foreach ( $user as $number => $u )
                         <td>
                             {{ $number+1 }}
                         </td>
@@ -43,6 +44,13 @@
                             5 Pesanan
                         </td>
                         <td>
+                            @if ($u->admin == 'TRUE')
+                            <div class="badge badge-success">Pemilik</div>
+                            @else
+                            <div class="badge badge-info">Pembeli</div>
+                            @endif
+                        </td>
+                        <td>
                             <a href="/user/edit/{{ $u->id }}" class="btn btn-primary btn-action mb-1 mt-1 mr-1"
                                 data-toggle="tooltip" title="Edit"><i class="fas fa-pencil-alt"></i></a>
                             <a class="btn btn-danger btn-action mb-1 mt-1" data-toggle="tooltip" title="Delete"
@@ -50,8 +58,8 @@
                                 data-confirm-yes="window.open('/user/delete/{{ $u->id }}','_self')"><i
                                     class="fas fa-trash"></i></a>
                         </td>
-                        @endforeach
                     </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

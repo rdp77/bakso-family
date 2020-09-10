@@ -39,8 +39,6 @@ Route::get('/checkout', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@dashboard')->name('home');
-
 // User Front End
 // Route::get('/user/create', 'UserController@create')->name('createUser');
 // Route::post('/user/store', 'UserController@store');
@@ -52,6 +50,8 @@ Route::get('/settings', 'UserController@settings')->name('profilesettings');
 
 // Check Role
 Route::group(['middleware' => 'roles'], function () {
+    // Dashboard
+    Route::get('/home', 'HomeController@dashboard')->name('home');
     // Product
     Route::get('/product', 'ProductController@index')->name('product');
     Route::get('/product/create', 'ProductController@create')->name('createProduct');
