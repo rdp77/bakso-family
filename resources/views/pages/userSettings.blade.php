@@ -59,13 +59,13 @@
     <div class="container mt-lg-3">
         <div class="card border-0 rounded shadow">
             <div class="card-body">
-                <h5 class="text-md-left text-center">Ganti Data :</h5>
+                <h5 class="text-md-left text-center">Ubah Data :</h5>
 
                 <div class="mt-3 text-md-left text-center d-sm-flex">
                     <img src="images/client/05.jpg"
                         class="avatar float-md-left avatar-medium rounded-circle shadow mr-md-4" alt="">
                     <div class="mt-md-4 mt-3 mt-sm-0">
-                        <a href="javascript:void(0)" class="btn btn-primary mt-2">Change Picture</a>
+                        <a href="javascript:void(0)" class="btn btn-primary mt-2">Ubah Gambar</a>
                     </div>
                 </div>
 
@@ -73,34 +73,33 @@
                     <div class="row mt-4">
                         <div class="col-md-6">
                             <div class="form-group position-relative">
-                                <label>Nama</label>
+                                <label>Nama :</label>
                                 <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" class="feather feather-user fea icon-sm icons">
                                     <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                                     <circle cx="12" cy="7" r="4"></circle>
                                 </svg>
-                                <input name="name" id="first" type="text" class="form-control pl-5"
-                                    placeholder="First Name :">
+                                <input name="name" id="first" type="text" class="form-control pl-5" placeholder="Nama">
                             </div>
                         </div>
                         <!--end col-->
                         <div class="col-md-6">
                             <div class="form-group position-relative">
-                                <label>Alamat</label>
-                                <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                <label>Alamat :</label>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-bookmark fea icon-sm icons">
-                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                    stroke-linejoin="round" class="feather feather-map-pin fea icon-sm icons">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
                                 </svg>
-                                <input name="name" id="last" type="text" class="form-control pl-5"
-                                    placeholder="Last Name :">
+                                <input name="name" id="last" type="text" class="form-control pl-5" placeholder="Alamat">
                             </div>
                         </div>
                         <!--end col-->
                         <div class="col-md-6">
                             <div class="form-group position-relative">
-                                <label>Email</label>
+                                <label>Email :</label>
                                 <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" class="feather feather-mail fea icon-sm icons">
@@ -110,13 +109,13 @@
                                     <polyline points="22,6 12,13 2,6"></polyline>
                                 </svg>
                                 <input name="email" id="email" type="email" class="form-control pl-5"
-                                    placeholder="Your email :">
+                                    placeholder="Email">
                             </div>
                         </div>
                         <!--end col-->
                         <div class="col-md-6">
                             <div class="form-group position-relative">
-                                <label>No Telepon</label>
+                                <label>No Telepon :</label>
                                 <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" class="feather feather-phone fea icon-sm icons">
@@ -125,7 +124,7 @@
                                     </path>
                                 </svg>
                                 <input name="name" id="occupation" type="text" class="form-control pl-5"
-                                    placeholder="Occupation :">
+                                    placeholder="No Telepon">
                             </div>
                         </div>
                         <!--end col-->
@@ -133,7 +132,8 @@
                     <!--end row-->
                     <div class="row">
                         <div class="col-sm-12">
-                            <input type="submit" id="submit" name="send" class="btn btn-primary" value="Save Changes">
+                            <input type="submit" id="submit" name="send" class="btn btn-primary"
+                                value="Simpan Perubahan">
                         </div>
                         <!--end col-->
                     </div>

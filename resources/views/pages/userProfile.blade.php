@@ -21,7 +21,7 @@
                                     <div class="col-md-7 text-md-left text-center mt-4 mt-sm-0">
                                         <h3 class="title mb-0">Krista Joseph</h3>
                                         <small class="text-muted h6 mr-2">
-                                            @if (Auth::User()->admin == '1')
+                                            @if (Auth::user()->admin == 'TRUE')
                                             Pemilik
                                             @else
                                             Pembeli

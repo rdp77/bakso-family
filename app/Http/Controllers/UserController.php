@@ -89,4 +89,14 @@ class UserController extends Controller
     {
         return view('pages.userPassword');
     }
+
+    public function profile()
+    {
+        return view('pages.userProfile');
+    }
+
+    public function settings()
+    {
+        return view('pages.usersettings');
+    }
 }

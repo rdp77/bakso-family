@@ -37,14 +37,6 @@ Route::get('/checkout', function () {
     return view('pages.checkout');
 })->name('checkout');
 
-Route::get('/profile', function () {
-    return view('pages.userProfile');
-})->name('profile');
-
-Route::get('/settings', function () {
-    return view('pages.usersettings');
-})->name('profilesettings');
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@dashboard')->name('home');
@@ -55,6 +47,8 @@ Route::get('/home', 'HomeController@dashboard')->name('home');
 Route::get('/history', 'UserController@history')->name('historyUser');
 Route::get('/status', 'UserController@status')->name('statusUser');
 Route::get('/changepass', 'UserController@password')->name('passwordUser');
+Route::get('/profile', 'UserController@profile')->name('profile');
+Route::get('/settings', 'UserController@settings')->name('profilesettings');
 
 // Check Role
 Route::group(['middleware' => 'roles'], function () {

@@ -38,13 +38,25 @@ class ProductController extends Controller
         $this->validate($req, [
             'name' => 'required',
             'price' => 'required',
+            'image' => 'image|mimes:png,jpg,jpeg,svg|max:2000',
         ]);
+
+        $id = Product::max('id') + 1;
+
+        if ($req->hasFile('image')) {
+            $imagePath = $req->file('image');
+            $fileName =  $id . '.' . $imagePath->getClientOriginalExtension();
+            $imagePath->move(public_path('storage/product'), $fileName);
+        } else {
+            $fileName =  'default.svg';
+        }
 
         $newprice = str_replace(',', '', $req->price);
 
         Product::create([
             'name' => $req->name,
-            'price' => $newprice
+            'price' => $newprice,
+            'image' => $fileName,
         ]);
 
         return redirect('/product');

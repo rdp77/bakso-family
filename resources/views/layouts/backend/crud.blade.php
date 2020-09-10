@@ -50,12 +50,7 @@
     <!-- Template JS File -->
     <script src="{{ asset('js/scripts.js') }}"></script>
     <script src="{{ asset('js/custom.js') }}"></script>
-    <script>
-        var cleaveC = new Cleave('.currency', {
-            numeral: true,
-            numeralThousandsGroupStyle: 'thousand'
-        });
-    </script>
+    @yield('script')
 </body>
 
 </html>

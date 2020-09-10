@@ -29,11 +29,12 @@
                             {{ $number+1 }}
                         </td>
                         <td>{{ $p->name }}</td>
-                        <td>Rp. {{ number_format($p->price) }}</td>
                         <td>
-                            <a class="btn btn-info btn-action mr-1 mt-1 mb-1" data-toggle="tooltip" title="Lihat Gambar"
-                                data-confirm="Are You Sure?|This action can not be undone. Do you want to continue?"
-                                data-confirm-yes="alert('Deleted')"><i class="fas fa-eye"></i></a>
+                            @if (number_format($p->price) == "0") GRATIS @else Rp. {{ number_format($p->price) }} @endif
+                        </td>
+                        <td>
+                            <button class="btn btn-info btn-action mr-1 mt-1 mb-1" data-toggle="tooltip"
+                                title="Lihat Gambar" id="modal-{{ $p->id }}"><i class="fas fa-eye"></i></button>
                             <a href="/product/edit/{{ $p->id }}" class="btn btn-primary btn-action mb-1 mt-1 mr-1"
                                 data-toggle="tooltip" title="Edit"><i class="fas fa-pencil-alt"></i></a>
                             <a class="btn btn-danger btn-action mb-1 mt-1" data-toggle="tooltip" title="Delete"
@@ -48,4 +49,14 @@
         </div>
     </div>
 </div>
+@endsection
+@section('script')
+@foreach($product as $p)
+<script>
+    $("#modal-{{ $p->id }}").fireModal({
+        title: 'Gambar Produk {{ $p->name }}',
+        body: '<img class="img-fluid" src="{{ asset('storage/product/'.$p->image) }}">'
+        });    
+</script>
+@endforeach
 @endsection

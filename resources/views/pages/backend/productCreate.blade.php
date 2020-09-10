@@ -8,7 +8,7 @@
 @section('titleContent', __('Buat Produk'))
 @section('content')
 <div class="card">
-    <form method="POST" action="/product/store">
+    <form method="POST" action="/product/store" enctype="multipart/form-data">
         @csrf
         <div class="card-body">
             <div class="form-group">
@@ -36,12 +36,17 @@
                 <span class="text-danger" role="alert">
                     {{ $message }}
                 </span>
+                @else
+                <span class="text-dark" role="alert">
+                    Agar gratis berikan nilai 0
+                </span>
                 @enderror
             </div>
             <div class="form-group">
                 <label>File</label>
-                <input type="file" class="form-control">
-                @error('price')
+                <input id="image" name="image" type="file" accept="image/png, image/jpeg, image/jpg, image/svg"
+                    class="form-control">
+                @error('image')
                 <span class="text-danger" role="alert">
                     {{ $message }}
                 </span>
@@ -58,4 +63,12 @@
         </div>
     </form>
 </div>
+@endsection
+@section('script')
+<script>
+    var cleaveC = new Cleave('.currency', {
+numeral: true,
+numeralThousandsGroupStyle: 'thousand'
+});
+</script>
 @endsection
