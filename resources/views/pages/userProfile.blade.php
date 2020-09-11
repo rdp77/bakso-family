@@ -11,7 +11,7 @@
                     <div class="card-body">
                         <div class="row align-items-center">
                             <div class="col-lg-2 col-md-3 text-md-left text-center">
-                                <img src="images/client/05.jpg"
+                                <img src="{{ asset('storage/user/'.Auth::user()->image) }}"
                                     class="avatar avatar-large rounded-circle shadow d-block mx-auto" alt="">
                             </div>
                             <!--end col-->
@@ -19,7 +19,7 @@
                             <div class="col-lg-10 col-md-9">
                                 <div class="row align-items-end">
                                     <div class="col-md-7 text-md-left text-center mt-4 mt-sm-0">
-                                        <h3 class="title mb-0">Krista Joseph</h3>
+                                        <h3 class="title mb-0">{{ Auth::user()->name }}</h3>
                                         <small class="text-muted h6 mr-2">
                                             @if (Auth::user()->admin == 'TRUE')
                                             Pemilik
@@ -82,21 +82,33 @@
                     <i data-feather="mail" class="fea icon-ex-md text-muted mr-3"></i>
                     <div class="media-body">
                         <h6 class="text-primary mb-0">Email :</h6>
-                        <a href="javascript:void(0)" class="text-muted">kristajoseph0203@mail.com</a>
+                        <div class="text-muted">{{ Auth::user()->email }}</div>
                     </div>
                 </div>
                 <div class="media align-items-center mt-3">
                     <i data-feather="map-pin" class="fea icon-ex-md text-muted mr-3"></i>
                     <div class="media-body">
                         <h6 class="text-primary mb-0">Alamat :</h6>
-                        <a href="javascript:void(0)" class="text-muted">Beijing, China</a>
+                        <div class="text-muted">
+                            @if (Auth::user()->address == '')
+                            Belum diatur
+                            @else
+                            {{ Auth::user()->address }}
+                            @endif
+                        </div>
                     </div>
                 </div>
                 <div class="media align-items-center mt-3">
                     <i data-feather="phone" class="fea icon-ex-md text-muted mr-3"></i>
                     <div class="media-body">
                         <h6 class="text-primary mb-0">No Telepon :</h6>
-                        <a href="javascript:void(0)" class="text-muted">(+12) 1254-56-4896</a>
+                        <div class="text-muted">
+                            @if (Auth::user()->tlp == '')
+                            Belum diatur
+                            @else
+                            {{ Auth::user()->tlp }}
+                            @endif
+                        </div>
                     </div>
                 </div>
             </div>

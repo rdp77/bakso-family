@@ -26,7 +26,6 @@ class UserController extends Controller
     public function index()
     {
         $user = User::all();
-        // dd($user);
         return view('pages.backend.user', ['user' => $user]);
     }
 
