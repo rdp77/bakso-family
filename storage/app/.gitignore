@@ -1,3 +1,4 @@
 *
-!public/
+!public/user/default.svg
+!public/product/default.svg
 !.gitignore
