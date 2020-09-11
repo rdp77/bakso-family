@@ -138,7 +138,7 @@
                         @else
                         {{ route('cart') }}
                         @endguest
-                        " class="btn btn-primary"><i class="mdi mdi-cart"></i>Keranjang</a>
+                        " class="btn btn-primary"><i class="mdi mdi-cart"></i> Keranjang</a>
                     </div>
                     {{-- <div class="col-lg-3 col-md-5 mt-4 mt-sm-0 pt-2 pt-sm-0">
                         <div class="form custom-form">

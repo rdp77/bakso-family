@@ -6,124 +6,90 @@
 @section('titleContent', __('Buat Pengguna'))
 @section('content')
 <div class="card">
-    <div class="card-header">
-        <h4>HTML5 Form Basic</h4>
-    </div>
-    <div class="card-body">
-        <div class="alert alert-info">
-            <b>Note!</b> Not all browsers support HTML5 type input.
-        </div>
-        <div class="form-group">
-            <label>Text</label>
-            <input type="text" class="form-control">
-        </div>
-        <div class="form-group">
-            <label>Select</label>
-            <select class="form-control">
-                <option>Option 1</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label>Select Multiple</label>
-            <select class="form-control" multiple="" data-height="100%" style="height: 100%;">
-                <option>Option 1</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
-                <option>Option 3</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label>Textarea</label>
-            <textarea class="form-control"></textarea>
-        </div>
-        <div class="form-group">
-            <label class="d-block">Checkbox</label>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="defaultCheck1">
-                <label class="form-check-label" for="defaultCheck1">
-                    Checkbox 1
-                </label>
+    <form method="POST" action="{{ route('storeUser') }}">
+        @csrf
+        <div class="card-body">
+            <div class="form-group">
+                <label for="name">Nama <span class="text-danger">*</span></label>
+                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name"
+                    required autofocus>
+                @error('name')
+                <span class="text-danger" role="alert">
+                    {{ $message }}
+                </span>
+                @enderror
             </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="defaultCheck3">
-                <label class="form-check-label" for="defaultCheck3">
-                    Checkbox 2
-                </label>
+            <div class="form-group">
+                <label for="email">Email <span class="text-danger">*</span></label>
+                <input id="email" type="email" value="{{ old('email') }}"
+                    class="form-control @error('email') is-invalid @enderror" name="email" autocomplete="email"
+                    required>
+                @error('email')
+                <span class="text-danger" role="alert">
+                    {{ $message }}
+                </span>
+                @enderror
             </div>
-        </div>
-        <div class="form-group">
-            <label>Color</label>
-            <input type="color" class="form-control">
-        </div>
-        <div class="form-group">
-            <label>Date</label>
-            <input type="date" class="form-control">
-        </div>
-        <div class="form-group">
-            <label>Datetime Local</label>
-            <input type="datetime-local" class="form-control">
-        </div>
-        <div class="form-group">
-            <label>Email</label>
-            <input type="email" class="form-control">
-        </div>
-        <div class="form-group">
-            <label>File</label>
-            <input type="file" class="form-control">
-        </div>
-        <div class="form-group">
-            <label>Month</label>
-            <input type="month" class="form-control">
-        </div>
-        <div class="form-group">
-            <label>Password</label>
-            <input type="password" class="form-control">
-        </div>
-        <div class="form-group">
-            <label class="d-block">Radio</label>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" checked="">
-                <label class="form-check-label" for="exampleRadios1">
-                    Radio 1
-                </label>
+            <div class="form-group">
+                <label for="password">Password <span class="text-danger">*</span></label>
+                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
+                    name="password" required>
+                @error('password')
+                <span class="text-danger" role="alert">
+                    {{ $message }}
+                </span>
+                @enderror
             </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" checked="">
-                <label class="form-check-label" for="exampleRadios2">
-                    Radio 2
-                </label>
+            <div class="form-group">
+                <label for="password-confirm">Ulangi password <span class="text-danger">*</span></label>
+                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required
+                    autocomplete="new-password">
+            </div>
+            <div class="form-group">
+                <label for="address">Alamat</label>
+                <input id="address" type="text" class="form-control @error('address') is-invalid @enderror"
+                    name="address">
+                @error('address')
+                <span class="text-danger" role="alert">
+                    {{ $message }}
+                </span>
+                @enderror
+            </div>
+            <div class="form-group">
+                <label for="tlp">No Telepon</label>
+                <input id="tlp" type="tel" class="form-control phone-number @error('tlp') is-invalid @enderror"
+                    name="tlp">
+                @error('tlp')
+                <span class="text-danger" role="alert">
+                    {{ $message }}
+                </span>
+                @enderror
+            </div>
+            <div class="form-group">
+                <label for="role">Role <span class="text-danger">*</span></label>
+                <select class="form-control" name="role">
+                    <option value="f">Pembeli</option>
+                    <option value="t">Pemilik</option>
+                </select>
+                @error('role')
+                <span class="text-danger" role="alert">
+                    {{ $message }}
+                </span>
+                @enderror
             </div>
         </div>
-        <div class="form-group">
-            <label>Range</label>
-            <input type="range" class="form-control">
+        <div class="card-footer text-right">
+            <button class="btn btn-primary mr-1" type="submit">Submit</button>
+            <button class="btn btn-secondary" type="reset">Reset</button>
         </div>
-        <div class="form-group">
-            <label>Search</label>
-            <input type="search" class="form-control">
-        </div>
-        <div class="form-group">
-            <label>Tel</label>
-            <input type="tel" class="form-control">
-        </div>
-        <div class="form-group">
-            <label>Time</label>
-            <input type="time" class="form-control">
-        </div>
-        <div class="form-group">
-            <label>Url</label>
-            <input type="url" class="form-control">
-        </div>
-        <div class="form-group mb-0">
-            <label>Week</label>
-            <input type="week" class="form-control">
-        </div>
-    </div>
-    <div class="card-footer text-right">
-        <button class="btn btn-primary mr-1" type="submit">Submit</button>
-        <button class="btn btn-secondary" type="reset">Reset</button>
-    </div>
+    </form>
 </div>
+@endsection
+@section('script')
+<script>
+    var cleaveC = new Cleave('.phone-number', {
+phone: true,
+phoneRegionCode: 'ID'
+});
+</script>
 @endsection

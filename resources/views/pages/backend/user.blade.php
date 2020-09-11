@@ -34,10 +34,18 @@
                         </td>
                         <td>{{ $u->name }}</td>
                         <td>
+                            @if ($u->address == '')
+                            Belum diatur
+                            @else
                             {{ $u->address }}
+                            @endif
                         </td>
                         <td>
+                            @if ($u->tlp == '')
+                            Belum diatur
+                            @else
                             {{ $u->tlp }}
+                            @endif
                         </td>
                         <td>{{ $u->email }}</td>
                         <td>

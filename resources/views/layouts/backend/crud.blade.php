@@ -47,6 +47,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
     <script src="{{ asset('js/stisla.js') }}"></script>
     <script src="{{ asset('js/cleave.min.js') }}"></script>
+    <script src="{{ asset('js/phone-type-formatter.id.js') }}"></script>
     <!-- Template JS File -->
     <script src="{{ asset('js/scripts.js') }}"></script>
     <script src="{{ asset('js/custom.js') }}"></script>

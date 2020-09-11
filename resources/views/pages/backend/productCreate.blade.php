@@ -8,7 +8,7 @@
 @section('titleContent', __('Buat Produk'))
 @section('content')
 <div class="card">
-    <form method="POST" action="/product/store" enctype="multipart/form-data">
+    <form method="POST" action="{{ route('storeProduct') }}" enctype="multipart/form-data">
         @csrf
         <div class="card-body">
             <div class="form-group">
