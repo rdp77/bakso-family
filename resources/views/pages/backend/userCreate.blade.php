@@ -2,7 +2,9 @@
 
 @section('title', __('Bakso Family Dashboard'))
 @section('breadcrumb', __('Data Pengguna'))
-@section('breadcrumb2', __('Buat Pengguna'))
+@section('morebreadcrumb')
+<div class="breadcrumb-item">{{ __('Buat Pengguna') }}</div>
+@endsection
 @section('titleContent', __('Buat Pengguna'))
 @section('content')
 <div class="card">

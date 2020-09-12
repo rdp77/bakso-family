@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rule;
 
 class UserController extends Controller
 {
@@ -58,15 +59,19 @@ class UserController extends Controller
 
     public function edit($id)
     {
-        $product = User::find($id);
-        return view('pages.backend.productEdit', ['product' => $product]);
+        $user = User::find($id);
+        return view('pages.backend.userEdit', ['user' => $user]);
     }
 
     public function update($id, Request $req)
     {
         $this->validate($req, [
-            'name' => 'required',
-            'price' => 'required',
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password' => [Rule::requiredIf($req->changesPass, '1'), 'string', 'min:8', 'confirmed'],
+            'address' => 'max:255',
+            'tlp' => 'sometimes|numeric|nullable',
+            'role' => 'required',
         ]);
 
         $product = User::find($id);
