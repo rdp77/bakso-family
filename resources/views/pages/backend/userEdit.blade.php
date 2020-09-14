@@ -36,15 +36,15 @@
                 <div class="control-label">Ubah Password</div>
                 <label for="changesPass" class="custom-switch mt-2">
                     <input id="changesPass" type="checkbox" name="changesPass" class="custom-switch-input"
-                        onclick="changes()" value="1">
+                        onclick="changes()" value="1" checked>
                     <span class="custom-switch-indicator"></span>
                     <span class="custom-switch-description">Ubah password yang sudah ada</span>
                 </label>
             </div>
             <div class="form-group">
-                <label for="password">Password <span class="text-danger required d-none">*</span></label>
+                <label for="password">Password <span class="text-danger required">*</span></label>
                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
-                    name="password" readonly>
+                    name="password">
                 @error('password')
                 <span class="text-danger" role="alert">
                     {{ $message }}
@@ -52,9 +52,9 @@
                 @enderror
             </div>
             <div class="form-group">
-                <label for="password-confirm">Ulangi password <span class="text-danger required d-none">*</span></label>
+                <label for="password-confirm">Ulangi password <span class="text-danger required">*</span></label>
                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation"
-                    autocomplete="new-password" readonly>
+                    autocomplete="new-password">
             </div>
             <div class="form-group">
                 <label for="address">Alamat</label>
@@ -107,15 +107,17 @@ function changes() {
     $('#password').prop('readonly', false);
     $('#password-confirm').prop('readonly', false);
     $('.required').removeClass('d-none');
-    $('#password').attr('required', true);
-    $('#password-confirm').attr('required', true);
+    $('#password').attr('required', false);
+    $('#password-confirm').attr('required', false);
+    $('#changesPass').val('1');  
   }
   else{
     $('#password').prop('readonly', true);
     $('#password-confirm').prop('readonly', true);
     $('.required').addClass('d-none');
-    $('#password').attr('required', false);
-    $('#password-confirm').attr('required', false);
+    $('#password').attr('required', true);
+    $('#password-confirm').attr('required', true);
+    $('#changesPass').val('');  
   }
 }
 </script>

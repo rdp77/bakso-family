@@ -67,17 +67,25 @@ class UserController extends Controller
     {
         $this->validate($req, [
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => [Rule::requiredIf($req->changesPass, '1'), 'string', 'min:8', 'confirmed'],
+            'email' => ['required', 'string', 'email', 'max:255'],
+            'password' => [Rule::requiredIf($req->changesPass, '1'), 'confirmed'],
             'address' => 'max:255',
             'tlp' => 'sometimes|numeric|nullable',
             'role' => 'required',
         ]);
 
-        $product = User::find($id);
-        $product->name = $req->name;
-        $product->price = $req->price;
-        $product->save();
+        $user = User::find($id);
+        $user->name = $req->name;
+        $user->email = $req->email;
+        $user->address = $req->address;
+        $user->tlp = $req->tlp;
+        $user->admin = $req->role;
+        $user->image = 'default.svg';
+
+        if ($req->changesPass = '1') {
+            $user->password = Hash::make($req->password);
+        }
+        $user->save();
         return redirect('/user');
     }
 
