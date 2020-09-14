@@ -33,6 +33,7 @@ class ForgotPasswordController extends Controller
         ]);
 
         $user = User::find(Auth::user()->id);
+
         if (Hash::check($req->oldPassword, Auth::user()->password)) {
             $user->password = Hash::make($req->password);
             $user->save();

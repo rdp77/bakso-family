@@ -18,7 +18,6 @@ Route::get('/', function () {
 });
 
 // Front End Page
-
 Route::get('/contact', function () {
     return view('pages.contact');
 })->name('contact');
@@ -46,8 +45,16 @@ Route::get('/history', 'UserController@history')->name('historyUser');
 Route::get('/status', 'UserController@status')->name('statusUser');
 Route::get('/changepass', 'UserController@password')->name('passwordUser');
 Route::get('/profile', 'UserController@profile')->name('profile');
-Route::get('/settings', 'UserController@settings')->name('profileSettings');
+
 Route::post('/reset', 'Auth\ForgotPasswordController@changePass')->name('changePass');
+Route::post('/update', 'UserController@updateProfile')->name('updateProfile');
+
+// Auth User
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/settings', function () {
+        return view('pages.userSettings');
+    })->name('profileSettings');
+});
 
 // Check Role
 Route::group(['middleware' => 'roles'], function () {

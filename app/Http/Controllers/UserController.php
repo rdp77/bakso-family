@@ -117,24 +117,29 @@ class UserController extends Controller
         return view('pages.userProfile');
     }
 
-    public function settings()
+    public function updateProfile(Request $req)
     {
-        return view('pages.userSettings');
-        // $this->validate($req, [
-        //     'name' => ['required', 'string', 'max:255'],
-        //     'email' => ['required', 'string', 'email', 'max:255'],
-        //     'address' => 'max:255',
-        //     'tlp' => 'sometimes|numeric|nullable',
-        // ]);
-
-        // $user = User::find(Auth::user()->id);
-        // $user->name = $req->name;
-        // $user->email = $req->email;
-        // $user->address = $req->address;
-        // $user->tlp = $req->tlp;
-        // if ($req->changesPass = '1') {
-        //     $user->password = Hash::make($req->password);
-        // }
-        // $user->save();
+        $this->validate($req, [
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255'],
+            'address' => 'max:255',
+            'tlp' => 'sometimes|numeric|nullable',
+            'image' => 'image|mimes:png,jpg,jpeg,svg|max:2000',
+        ]);
+        if ($req->hasFile('image')) {
+            $imagePath = $req->file('image');
+            $fileName =  Auth::user()->id . '.' . $imagePath->getClientOriginalExtension();
+            $imagePath->move(public_path('storage/user'), $fileName);
+        } else {
+            $fileName =  'default.svg';
+        }
+        $user = User::find(Auth::user()->id);
+        $user->name = $req->name;
+        $user->email = $req->email;
+        $user->address = $req->address;
+        $user->tlp = $req->tlp;
+        $user->image = $fileName;
+        $user->save();
+        return redirect('/profile');
     }
 }

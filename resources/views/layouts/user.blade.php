@@ -63,6 +63,7 @@
     <script src="https://unicons.iconscout.com/release/v2.1.9/script/monochrome/bundle.js"></script>
     <!-- Main Js -->
     <script src="{{ asset('js/app.js') }}"></script>
+    @yield('script')
 </body>
 
 </html>
