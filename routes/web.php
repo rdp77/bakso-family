@@ -46,7 +46,7 @@ Route::get('/history', 'UserController@history')->name('historyUser');
 Route::get('/status', 'UserController@status')->name('statusUser');
 Route::get('/changepass', 'UserController@password')->name('passwordUser');
 Route::get('/profile', 'UserController@profile')->name('profile');
-Route::get('/settings', 'UserController@settings')->name('profilesettings');
+Route::get('/settings', 'UserController@settings')->name('profileSettings');
 
 // Check Role
 Route::group(['middleware' => 'roles'], function () {

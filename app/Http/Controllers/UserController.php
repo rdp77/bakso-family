@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -118,6 +119,22 @@ class UserController extends Controller
 
     public function settings()
     {
-        return view('pages.usersettings');
+        return view('pages.userSettings');
+        // $this->validate($req, [
+        //     'name' => ['required', 'string', 'max:255'],
+        //     'email' => ['required', 'string', 'email', 'max:255'],
+        //     'address' => 'max:255',
+        //     'tlp' => 'sometimes|numeric|nullable',
+        // ]);
+
+        // $user = User::find(Auth::user()->id);
+        // $user->name = $req->name;
+        // $user->email = $req->email;
+        // $user->address = $req->address;
+        // $user->tlp = $req->tlp;
+        // if ($req->changesPass = '1') {
+        //     $user->password = Hash::make($req->password);
+        // }
+        // $user->save();
     }
 }

@@ -44,7 +44,7 @@
                                                     class="rounded" data-toggle="tooltip" data-placement="bottom"
                                                     title="Ubah Password"><i data-feather="key"
                                                         class="fea icon-sm fea-social"></i></a></li>
-                                            <li class="list-inline-item"><a href="{{ route('profilesettings') }}"
+                                            <li class="list-inline-item"><a href="{{ route('profileSettings') }}"
                                                     class="rounded" data-toggle="tooltip" data-placement="bottom"
                                                     title="Pengaturan"><i data-feather="tool"
                                                         class="fea icon-sm fea-social"></i></a></li>
