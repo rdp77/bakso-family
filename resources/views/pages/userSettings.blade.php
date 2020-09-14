@@ -16,7 +16,6 @@
                         class="avatar float-md-left avatar-medium rounded-circle shadow mr-md-4" alt="">
                     <div class="mt-md-4 mt-3 mt-sm-0">
                         <a href="javascript:void(0)" class="btn btn-primary mt-2">Ubah Gambar</a>
-                        <a href="javascript:void(0)" class="btn btn-outline-primary mt-2 ml-2">Hapus</a>
                     </div>
                 </div>
 

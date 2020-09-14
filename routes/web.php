@@ -47,6 +47,7 @@ Route::get('/status', 'UserController@status')->name('statusUser');
 Route::get('/changepass', 'UserController@password')->name('passwordUser');
 Route::get('/profile', 'UserController@profile')->name('profile');
 Route::get('/settings', 'UserController@settings')->name('profileSettings');
+Route::post('/reset', 'Auth\ForgotPasswordController@changePass')->name('changePass');
 
 // Check Role
 Route::group(['middleware' => 'roles'], function () {
