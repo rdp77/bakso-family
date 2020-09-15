@@ -48,7 +48,7 @@ class ProductController extends Controller
             $fileName =  $id . '.' . $imagePath->getClientOriginalExtension();
             $imagePath->move(public_path('storage/product'), $fileName);
         } else {
-            $fileName =  'default.svg';
+            $fileName =  'default.jpg';
         }
 
         $newprice = str_replace(',', '', $req->price);
