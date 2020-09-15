@@ -10,24 +10,10 @@
     <meta name="keywords" content="Bakso, family, surabaya, online, umkm, digital, online payment" />
     <!-- favicon -->
     <link rel="shortcut icon" href="images/favicon.ico">
-    <!-- Bootstrap -->
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
-    <!-- Icons -->
-    <link href="{{ asset('css/materialdesignicons.min.css') }}" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
-    <!-- Magnific -->
-    <link href="{{ asset('css/magnific-popup.css') }}" rel="stylesheet" type="text/css" />
-    <!-- FLEXSLIDER -->
-    <link href="{{ asset('css/flexslider.css') }}" rel="stylesheet" type="text/css" />
-    <!-- Slider -->
-    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}" />
-    <link href="{{ asset('css/swiper.min.css') }}" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="{{ asset('css/slick.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/slick-theme.css') }}" />
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700&display=swap">
     <!-- Main Css -->
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css" id="theme-opt" />
-    <link href="{{ asset('css/colors/default.css') }}" rel="stylesheet" id="color-opt">
+    <link href="{{ asset('css/front.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -80,29 +66,8 @@
             class="icons"></i></a>
     <!-- Back to top -->
 
-    <!-- javascript -->
-    <script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
-    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.easing.min.js') }}"></script>
-    <script src="{{ asset('js/scrollspy.min.js') }}"></script>
-    <!-- SLIDER -->
-    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('js/owl.init.js') }}"></script>
-    <script src="{{ asset('js/swiper.min.js') }}"></script>
-    <script src="{{ asset('js/swiper.init.js') }}"></script>
-    <script src="{{ asset('js/slick.min.js') }}"></script>
-    <script src="{{ asset('js/slick.init.js') }}"></script>
-    <!--FLEX SLIDER-->
-    <script src="{{ asset('js/jquery.flexslider-min.js') }}"></script>
-    <script src="{{ asset('js/flexslider.init.js') }}"></script>
-    <!-- SLIDER -->
-    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('js/owl.init.js') }}"></script>
-    <!-- Icons -->
-    <script src="{{ asset('js/feather.min.js') }}"></script>
-    <script src="https://unicons.iconscout.com/release/v2.1.9/script/monochrome/bundle.js"></script>
     <!-- Main Js -->
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/front.js') }}"></script>
     <!-- Quantity Plus Minus JS -->
     <script>
         $('.plus').click(function () {
