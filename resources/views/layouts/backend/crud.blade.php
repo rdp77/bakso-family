@@ -10,11 +10,10 @@
     <!-- Bootstrap -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- Icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    <link rel="stylesheet preload" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- Main Css -->
-    <link rel="stylesheet" href="{{ asset('css/stylebackend.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/components.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/backend.css') }}">
 </head>
 
 <body>
@@ -42,15 +41,7 @@
         </div>
     </div>
     <!-- javascript -->
-    <script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
-    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
-    <script src="{{ asset('js/stisla.js') }}"></script>
-    <script src="{{ asset('js/cleave.min.js') }}"></script>
-    <script src="{{ asset('js/phone-type-formatter.id.js') }}"></script>
-    <!-- Template JS File -->
-    <script src="{{ asset('js/scripts.js') }}"></script>
-    <script src="{{ asset('js/custom.js') }}"></script>
+    <script src="{{ asset('js/backend.js') }}"></script>
     @yield('script')
 </body>
 

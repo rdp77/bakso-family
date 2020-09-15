@@ -49,3 +49,30 @@ mix.scripts(
     ],
     "public/js/front.js"
 );
+
+// Back End
+mix.styles(
+    [
+        "resources/css/bootstrap.min.css",
+        "resources/css/datatables.css",
+        "resources/css/datatablesboostrap4.css",
+        "resources/css/stylebackend.css",
+        "resources/css/components.css"
+    ],
+    "public/css/backend.css"
+);
+
+mix.scripts(
+    [
+        "resources/js/jquery-3.5.1.min.js",
+        "resources/js/bootstrap.bundle.min.js",
+        "resources/js/nicescroll.js",
+        "resources/js/stisla.js",
+        "resources/js/cleave.min.js",
+        "resources/js/phone-type-formatter.id.js",
+        "resources/js/datatables.js",
+        "resources/js/datatablesboostrap4.js",
+        "resources/js/scripts.js"
+    ],
+    "public/js/backend.js"
+);

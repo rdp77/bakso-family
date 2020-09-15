@@ -11,7 +11,7 @@
     </div>
     <div class="card-body">
         <div class="table-responsive">
-            <table class="table table-striped" id="table-1">
+            <table class="table table-striped" id="datatables">
                 <thead>
                     <tr>
                         <th class="text-center">
@@ -59,4 +59,9 @@
         });    
 </script>
 @endforeach
+<script>
+    $("#datatables").dataTable({
+        responsive: true
+    });
+</script>
 @endsection
