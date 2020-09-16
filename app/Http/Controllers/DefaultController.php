@@ -13,8 +13,12 @@ class DefaultController extends Controller
     {
         $product = Product::all();
         $total = DB::table('product')->select('*')->count();
-        $cart = \Cart::session(Auth::user()->id)->getContent()->count();
-        return view('pages.shop', ['product' => $product, 'total' => $total, 'cart' => $cart]);
+        if (Auth::check()) {
+            $cart = \Cart::session(Auth::user()->id)->getContent()->count();
+            return view('pages.shop', ['product' => $product, 'total' => $total, 'cart' => $cart]);
+        } else {
+            return view('pages.shop', ['product' => $product, 'total' => $total]);
+        }
     }
 
     public function contact()

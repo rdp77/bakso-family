@@ -78,7 +78,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-9 col-md-7">
                         <div class="section-title">
-                            <h5 class="mb-0">{{ $product }} Varian Bakso</h5>
+                            <h5 class="mb-0">{{ $total }} Varian Bakso</h5>
                         </div>
                     </div>
                     <!--end col-->
@@ -93,7 +93,12 @@
                             @endguest
                             " class="btn btn-outline-primary"><i class="mdi mdi-cart"></i> <span
                                     class="badge badge-pill badge-success">
-                                    {{ $cart }} </span></a>
+                                    @if(Auth::check())
+                                    {{ $cart }}
+                                    @else
+                                    0
+                                    @endif
+                                </span></a>
                         </div>
                     </div>
                     <!--end col-->
