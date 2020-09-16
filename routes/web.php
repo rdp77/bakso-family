@@ -18,20 +18,12 @@ Route::get('/', function () {
 });
 
 // Front End Page
-Route::get('/contact', function () {
-    return view('pages.contact');
-})->name('contact');
+Route::get('/contact', 'DefaultController@contact')->name('contact');
+Route::get('/shop', 'DefaultController@shop')->name('shop');
 
-Route::get('/shop', function () {
-    return view('pages.shop');
-})->name('shop');
-
-Route::get('/details', function () {
-    return view('pages.shopDetails');
-})->name('shopdetails');
-
-Route::get('/cart', 'HomeController@cart')->name('cart');
-
+// Shop
+Route::get('/cart', 'ProductController@cart')->name('cart');
+Route::get('/add', 'ProductController@addProduct')->name('addProduct');
 Route::get('/checkout', function () {
     return view('pages.checkout');
 })->name('checkout');
@@ -39,22 +31,14 @@ Route::get('/checkout', function () {
 Auth::routes();
 
 // User Front End
-// Route::get('/user/create', 'UserController@create')->name('createUser');
-// Route::post('/user/store', 'UserController@store');
 Route::get('/history', 'UserController@history')->name('historyUser');
 Route::get('/status', 'UserController@status')->name('statusUser');
 Route::get('/changepass', 'UserController@password')->name('passwordUser');
 Route::get('/profile', 'UserController@profile')->name('profile');
-
+Route::get('/settings', 'UserController@settings')->name('profileSettings');
+// User Front End Changes
 Route::post('/reset', 'Auth\ForgotPasswordController@changePass')->name('changePass');
 Route::post('/update', 'UserController@updateProfile')->name('updateProfile');
-
-// Auth User
-Route::group(['middleware' => 'auth'], function () {
-    Route::get('/settings', function () {
-        return view('pages.userSettings');
-    })->name('profileSettings');
-});
 
 // Check Role
 Route::group(['middleware' => 'roles'], function () {

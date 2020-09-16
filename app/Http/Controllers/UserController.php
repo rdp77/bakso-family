@@ -97,26 +97,6 @@ class UserController extends Controller
         return redirect('/user');
     }
 
-    public function history()
-    {
-        return view('pages.userHistory');
-    }
-
-    public function status()
-    {
-        return view('pages.userStatus');
-    }
-
-    public function password()
-    {
-        return view('pages.userPassword');
-    }
-
-    public function profile()
-    {
-        return view('pages.userProfile');
-    }
-
     public function updateProfile(Request $req)
     {
         $this->validate($req, [
@@ -141,5 +121,30 @@ class UserController extends Controller
         $user->image = $fileName;
         $user->save();
         return redirect('/profile');
+    }
+
+    public function settings()
+    {
+        return view('pages.userSettings');
+    }
+
+    public function history()
+    {
+        return view('pages.userHistory');
+    }
+
+    public function status()
+    {
+        return view('pages.userStatus');
+    }
+
+    public function password()
+    {
+        return view('pages.userPassword');
+    }
+
+    public function profile()
+    {
+        return view('pages.userProfile');
     }
 }

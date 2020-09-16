@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use Cookie;
+use Darryldecode\Cart\CartCondition;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
@@ -87,5 +90,44 @@ class ProductController extends Controller
         $product = Product::find($id);
         $product->delete();
         return redirect('/product');
+    }
+
+    public function addProduct(Request $req)
+    {
+        // Quick Usage with the Product Model Association & User session binding
+
+        $Product = Product::find($req->id); // assuming you have a Product model with id, name, description & price
+        $rowId = 456; // generate a unique() row ID
+        $userID = Auth::user()->id; // the user ID to bind the cart contents
+
+        $id = '2';
+        $name = 'asd';
+        $price = '2000';
+        $qty = '3';
+        // dd($id, $name, $price);
+
+        // add the product to cart
+        // \Cart::session($userID)->add(array(
+        //     'id' => $id,
+        //     'name' => $name,
+        //     'price' => $price,
+        //     'quantity' => 4,
+        // ));
+        \Cart::session($userID)->add($id, $name, $price, $qty);
+        return redirect('/shop');
+    }
+    public function cart()
+    {
+        // view the cart items
+        $items = \Cart::session(Auth::user()->id)->getContent();
+        $total = $items->count();
+        // foreach ($items as $row) {
+
+        //     echo $row->id; // row ID
+        //     echo $row->name;
+        //     echo $row->qty;
+        //     echo $row->price;
+        // }
+        return view('pages.cart', ['items' => $items, 'total' => $total]);
     }
 }

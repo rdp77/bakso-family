@@ -33,9 +33,4 @@ class HomeController extends Controller
         // dd($count);
         return view('home');
     }
-
-    public function cart()
-    {
-        return view('pages.cart');
-    }
 }

@@ -11,6 +11,12 @@
         <div class="row">
             <div class="col-12">
                 <div class="table-responsive bg-white shadow">
+                    @foreach ($items as $i)
+                    {{ $i->id }}
+                    {{ $i->name }}
+                    {{ $i->qty }}
+                    {{ $i->price }}
+                    @endforeach
                     <table class="table table-center table-padding mb-0">
                         <thead>
                             <tr>
