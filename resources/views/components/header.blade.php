@@ -3,7 +3,7 @@
         <!-- Logo container-->
         <div>
             <a class="logo" href="/">
-                <img src="{{ asset('images/logo-dark.png') }}" height="24" alt="">
+                <img src="{{ asset('storage/images/logo-dark.png') }}" height="24" alt="">
             </a>
         </div>
         <div class="buy-button">

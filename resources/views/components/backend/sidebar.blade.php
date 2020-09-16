@@ -19,6 +19,10 @@
                 <a href="{{ route('product') }}" class="nav-link"><i class="fas fa-th"></i>
                     <span>Produk</span></a>
             </li>
+            <li class="nav-item dropdown">
+                <a href="{{ route('product') }}" class="nav-link"><i class="fas fa-pencil-ruler"></i>
+                    <span>Kustomisasi</span></a>
+            </li>
         </ul>
     </aside>
 </div>

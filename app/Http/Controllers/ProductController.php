@@ -120,7 +120,9 @@ class ProductController extends Controller
     {
         // view the cart items
         $items = \Cart::session(Auth::user()->id)->getContent();
-        $total = $items->count();
+        $product = $items->count();
+        $subtotal = \Cart::getSubTotal();
+        $total = \Cart::getTotal();
         // foreach ($items as $row) {
 
         //     echo $row->id; // row ID
@@ -128,6 +130,6 @@ class ProductController extends Controller
         //     echo $row->qty;
         //     echo $row->price;
         // }
-        return view('pages.cart', ['items' => $items, 'total' => $total]);
+        return view('pages.cart', ['items' => $items, 'product' => $product, 'subtotal' => $subtotal, 'total' => $total]);
     }
 }

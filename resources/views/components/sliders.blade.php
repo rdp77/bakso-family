@@ -1,7 +1,7 @@
 <section class="main-slider">
     <ul class="slides">
         <li class="bg-slider slider-rtl-2 d-flex align-items-center"
-            style="background:url('images/shop/bg2.jpg') center center;">
+            style="background:url('{{ asset('storage/images/slider.jpg') }}') center center;">
             <div class="container">
                 <div class="row align-items-center mt-5">
                     <div class="col-lg-7 col-md-7">
@@ -22,7 +22,7 @@
             <!--end container-->
         </li>
         <li class="bg-slider slider-rtl-1 d-flex align-items-center"
-            style="background:url('images/shop/bg1.jpg') center center;">
+            style="background:url('{{ asset('storage/images/slider.jpg') }}') center center;">
             <div class="container">
                 <div class="row align-items-center mt-5">
                     <div class="col-lg-7 col-md-7">
@@ -42,7 +42,7 @@
             <!--end container-->
         </li>
         <li class="bg-slider slider-rtl-3 d-flex align-items-center"
-            style="background:url('images/shop/bg3.jpg') center center;">
+            style="background:url('{{ asset('storage/images/slider.jpg') }}') center center;">
             <div class="container">
                 <div class="row align-items-center mt-5">
                     <div class="col-lg-7 col-md-7">

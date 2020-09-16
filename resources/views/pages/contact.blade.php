@@ -22,7 +22,7 @@
                 <div class="card contact-detail text-center border-0">
                     <div class="card-body p-0">
                         <div class="icon">
-                            <img src="images/icon/bitcoin.svg" class="avatar avatar-small" alt="">
+                            <img src="{{ asset('storage/images/call.svg') }}" class="avatar avatar-small" alt="">
                         </div>
                         <div class="content mt-3">
                             <h4 class="title font-weight-bold">WhatsApp atau No Hp</h4>
@@ -41,7 +41,7 @@
                 <div class="card contact-detail text-center border-0">
                     <div class="card-body p-0">
                         <div class="icon">
-                            <img src="images/icon/Email.svg" class="avatar avatar-small" alt="">
+                            <img src="{{ asset('storage/images/email.svg') }}" class="avatar avatar-small" alt="">
                         </div>
                         <div class="content mt-3">
                             <h4 class="title font-weight-bold">Email</h4>
@@ -57,7 +57,7 @@
                 <div class="card contact-detail text-center border-0">
                     <div class="card-body p-0">
                         <div class="icon">
-                            <img src="images/icon/location.svg" class="avatar avatar-small" alt="">
+                            <img src="{{ asset('storage/images/location.svg') }}" class="avatar avatar-small" alt="">
                         </div>
                         <div class="content mt-3">
                             <h4 class="title font-weight-bold">Lokasi</h4>

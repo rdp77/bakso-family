@@ -13,7 +13,7 @@
                         <div class="widget mt-4 pt-2">
                             <h4 class="widget-title">{{ __('Terlaris') }}</h4>
                             <ul class="list-unstyled mt-4 mb-0">
-                                @if ($total == '0')
+                                @if ($product == '0')
                                 <li class="media align-items-center">
                                     <a href="javascript:void(0)" class="text-dark h6">Varian Sedang Kosong</a>
                                 </li>
@@ -78,7 +78,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-9 col-md-7">
                         <div class="section-title">
-                            <h5 class="mb-0">{{ $total }} Varian Bakso</h5>
+                            <h5 class="mb-0">{{ $product }} Varian Bakso</h5>
                         </div>
                     </div>
                     <!--end col-->
@@ -101,7 +101,7 @@
                 <!--end row-->
 
                 <div class="row">
-                    @if ($total == '0')
+                    @if ($product == '0')
                     <img src="{{ asset('storage/images/empty_product.svg') }}" class="img-fluid mt-3">
                     @else
                     @foreach ($product as $p)

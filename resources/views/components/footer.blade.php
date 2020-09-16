@@ -18,15 +18,12 @@
 
             <div class="col-sm-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
                 <ul class="list-unstyled text-sm-right mb-0">
-                    <li class="list-inline-item"><a href="javascript:void(0)"><img
-                                src="{{ asset('images/payments/gopay.png') }}" class="avatar avatar-ex-sm" title="GoPay"
-                                alt=""></a></li>
-                    <li class="list-inline-item"><a href="javascript:void(0)"><img
-                                src="{{ asset('images/payments/ovo.png') }}" class="avatar avatar-ex-sm" title="OVO"
-                                alt=""></a></li>
-                    <li class="list-inline-item"><a href="javascript:void(0)"><img
-                                src="{{ asset('images/payments/linkaja.svg') }}" class="avatar avatar-ex-sm"
-                                title="Link Aja" alt=""></a></li>
+                    <li class="list-inline-item"><img src="{{ asset('storage/images/gopay.png') }}"
+                            class="avatar avatar-ex-sm" title="GoPay" alt=""></li>
+                    <li class="list-inline-item"><img src="{{ asset('storage/images/ovo.png') }}"
+                            class="avatar avatar-ex-sm" title="OVO" alt=""></li>
+                    <li class="list-inline-item"><img src="{{ asset('storage/images/linkaja.svg') }}"
+                            class="avatar avatar-ex-sm" title="Link Aja" alt=""></li>
                 </ul>
             </div>
             <!--end col-->

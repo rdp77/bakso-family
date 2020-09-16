@@ -13,11 +13,9 @@
                 <form enctype="multipart/form-data" action="{{ route('updateProfile') }}" method="POST">
                     @csrf
                     <div class="mt-3 text-md-left text-center d-sm-flex">
-                        <img src="/images/client/05.jpg"
+                        <img src="{{ asset('storage/images/avatar.jpg') }}"
                             class="avatar float-md-left avatar-medium rounded-circle shadow mr-md-4" id="preview">
                         <div class="mt-md-4 mt-3 mt-sm-0">
-                            {{-- <a href="javascript:void(0)" class="btn btn-primary mt-2">Ubah Gambar</a>
-                        <input id="file-input" type="file" class="btn btn-primary" value="Ubah Gambar" /> --}}
                             <label for="image" style="cursor: pointer" class="btn btn-primary mt-2">Ubah Gambar</label>
                             <input type="file" name="image" id="image"
                                 style="opacity: 0;position: absolute;z-index: -1;" onchange="readURL(this)" />

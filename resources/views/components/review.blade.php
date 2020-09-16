@@ -21,8 +21,8 @@
                             style="transform: translate3d(-1725px, 0px, 0px); transition: all 0.25s ease 0s; width: 4140px;">
                             <div class="owl-item cloned" style="width: 345px;">
                                 <div class="media customer-testi m-2">
-                                    <img src="images/client/04.jpg" class="avatar avatar-small mr-3 rounded shadow"
-                                        alt="">
+                                    <img src="{{ asset('storage/images/avatar.jpg') }}"
+                                        class="avatar avatar-small mr-3 rounded shadow" alt="">
                                     <div class="media-body content p-3 shadow rounded bg-white position-relative">
                                         <ul class="list-unstyled mb-0">
                                             <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i>
@@ -44,8 +44,8 @@
                             </div>
                             <div class="owl-item cloned" style="width: 345px;">
                                 <div class="media customer-testi m-2">
-                                    <img src="images/client/05.jpg" class="avatar avatar-small mr-3 rounded shadow"
-                                        alt="">
+                                    <img src="{{ asset('storage/images/avatar.jpg') }}"
+                                        class="avatar avatar-small mr-3 rounded shadow" alt="">
                                     <div class="media-body content p-3 shadow rounded bg-white position-relative">
                                         <ul class="list-unstyled mb-0">
                                             <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i>
@@ -67,8 +67,8 @@
                             </div>
                             <div class="owl-item cloned" style="width: 345px;">
                                 <div class="media customer-testi m-2">
-                                    <img src="images/client/06.jpg" class="avatar avatar-small mr-3 rounded shadow"
-                                        alt="">
+                                    <img src="{{ asset('storage/images/avatar.jpg') }}"
+                                        class="avatar avatar-small mr-3 rounded shadow" alt="">
                                     <div class="media-body content p-3 shadow rounded bg-white position-relative">
                                         <ul class="list-unstyled mb-0">
                                             <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i>
@@ -90,8 +90,8 @@
                             </div>
                             <div class="owl-item" style="width: 345px;">
                                 <div class="media customer-testi m-2">
-                                    <img src="images/client/01.jpg" class="avatar avatar-small mr-3 rounded shadow"
-                                        alt="">
+                                    <img src="{{ asset('storage/images/avatar.jpg') }}"
+                                        class="avatar avatar-small mr-3 rounded shadow" alt="">
                                     <div class="media-body content p-3 shadow rounded bg-white position-relative">
                                         <ul class="list-unstyled mb-0">
                                             <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i>
@@ -113,8 +113,8 @@
                             </div>
                             <div class="owl-item" style="width: 345px;">
                                 <div class="media customer-testi m-2">
-                                    <img src="images/client/02.jpg" class="avatar avatar-small mr-3 rounded shadow"
-                                        alt="">
+                                    <img src="{{ asset('storage/images/avatar.jpg') }}"
+                                        class="avatar avatar-small mr-3 rounded shadow" alt="">
                                     <div class="media-body content p-3 shadow rounded bg-white position-relative">
                                         <ul class="list-unstyled mb-0">
                                             <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i>
@@ -136,8 +136,8 @@
                             </div>
                             <div class="owl-item active" style="width: 345px;">
                                 <div class="media customer-testi m-2">
-                                    <img src="images/client/03.jpg" class="avatar avatar-small mr-3 rounded shadow"
-                                        alt="">
+                                    <img src="{{ asset('storage/images/avatar.jpg') }}"
+                                        class="avatar avatar-small mr-3 rounded shadow" alt="">
                                     <div class="media-body content p-3 shadow rounded bg-white position-relative">
                                         <ul class="list-unstyled mb-0">
                                             <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i>
@@ -160,8 +160,8 @@
                             </div>
                             <div class="owl-item active" style="width: 345px;">
                                 <div class="media customer-testi m-2">
-                                    <img src="images/client/04.jpg" class="avatar avatar-small mr-3 rounded shadow"
-                                        alt="">
+                                    <img src="{{ asset('storage/images/avatar.jpg') }}"
+                                        class="avatar avatar-small mr-3 rounded shadow" alt="">
                                     <div class="media-body content p-3 shadow rounded bg-white position-relative">
                                         <ul class="list-unstyled mb-0">
                                             <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i>
@@ -183,8 +183,8 @@
                             </div>
                             <div class="owl-item" style="width: 345px;">
                                 <div class="media customer-testi m-2">
-                                    <img src="images/client/05.jpg" class="avatar avatar-small mr-3 rounded shadow"
-                                        alt="">
+                                    <img src="{{ asset('storage/images/avatar.jpg') }}"
+                                        class="avatar avatar-small mr-3 rounded shadow" alt="">
                                     <div class="media-body content p-3 shadow rounded bg-white position-relative">
                                         <ul class="list-unstyled mb-0">
                                             <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i>
@@ -206,8 +206,8 @@
                             </div>
                             <div class="owl-item" style="width: 345px;">
                                 <div class="media customer-testi m-2">
-                                    <img src="images/client/06.jpg" class="avatar avatar-small mr-3 rounded shadow"
-                                        alt="">
+                                    <img src="{{ asset('storage/images/avatar.jpg') }}"
+                                        class="avatar avatar-small mr-3 rounded shadow" alt="">
                                     <div class="media-body content p-3 shadow rounded bg-white position-relative">
                                         <ul class="list-unstyled mb-0">
                                             <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i>

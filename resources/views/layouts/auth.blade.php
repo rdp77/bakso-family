@@ -9,7 +9,7 @@
         content="Bakso Family merupakan bakso yang berbasis di surabaya dengan konsep pemesanan online dan pastinya terenak dan termurah" />
     <meta name="keywords" content="Bakso, family, surabaya, online, umkm, digital, online payment" />
     <!-- favicon -->
-    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="{{ asset('storage/images/favicon.ico') }}">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700&display=swap">
     <!-- Main Css -->
