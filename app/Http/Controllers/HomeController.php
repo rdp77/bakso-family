@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -32,5 +33,17 @@ class HomeController extends Controller
         // $count = Product::sum('id');
         // dd($count);
         return view('home');
+    }
+
+    public function checkOut()
+    {
+        $items = \Cart::session(Auth::user()->id)->getContent();
+        $product = $items->count();
+        $subtotal = \Cart::getSubTotal();
+        $total = \Cart::getTotal();
+        return view('pages.checkout', [
+            'items' => $items, 'product' => $product, 'subtotal' => $subtotal,
+            'total' => $total,
+        ]);
     }
 }

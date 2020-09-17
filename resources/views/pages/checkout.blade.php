@@ -17,62 +17,29 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="form-group position-relative">
-                                    <label>Your Name <span class="text-danger">*</span></label>
+                                    <label>Nama Lengkap <span class="text-danger">*</span></label>
                                     <input name="name" id="firstname" type="text" class="form-control"
-                                        placeholder="First Name :">
+                                        value="{{ Auth::user()->name }}">
                                 </div>
                             </div>
                             <!--end col-->
-                            <div class="col-12">
-                                <div class="form-group position-relative">
-                                    <label>Last Name <span class="text-danger">*</span></label>
-                                    <input name="name" id="lastname" type="text" class="form-control"
-                                        placeholder="Last Name :">
-                                </div>
-                            </div>
-                            <!--end col-->
-                            <div class="col-12">
+                            {{-- <div class="col-12">
                                 <div class="form-group position-relative">
                                     <label>Company Name <span class="text-muted">(Optional)</span></label>
                                     <input name="name" id="companyname" type="text" class="form-control"
                                         placeholder="Company Name :">
                                 </div>
-                            </div>
+                            </div> --}}
                             <!--end col-->
                             <div class="col-12">
                                 <div class="form-group position-relative">
-                                    <label>Street address <span class="text-danger">*</span></label>
+                                    <label>Alamat <span class="text-danger">*</span></label>
                                     <input type="text" name="address1" id="address1" class="form-control"
-                                        placeholder="House number and street name :">
+                                        value="{{ Auth::user()->address }}">
                                 </div>
                             </div>
                             <!--end col-->
-                            <div class="col-12">
-                                <div class="form-group position-relative">
-                                    <label>Apartment, suite, unit etc. <span
-                                            class="text-muted">(Optional)</span></label>
-                                    <input type="text" name="address2" id="address2" class="form-control"
-                                        placeholder="Apartment, suite, unit etc. :">
-                                </div>
-                            </div>
-                            <!--end col-->
-                            <div class="col-md-6">
-                                <div class="form-group position-relative">
-                                    <label>Town / City <span class="text-danger">*</span></label>
-                                    <input type="text" name="city" id="city" class="form-control"
-                                        placeholder="City Name :">
-                                </div>
-                            </div>
-                            <!--end col-->
-                            <div class="col-md-6">
-                                <div class="form-group position-relative">
-                                    <label>Postal Code <span class="text-danger">*</span></label>
-                                    <input type="text" name="postcode" id="postcode" class="form-control"
-                                        placeholder="Zip :">
-                                </div>
-                            </div>
-                            <!--end col-->
-                            <div class="col-md-6">
+                            {{-- <div class="col-md-6">
                                 <div class="form-group position-relative">
                                     <label>State <span class="text-danger">*</span></label>
                                     <input type="text" name="state" id="state" class="form-control"
@@ -96,21 +63,21 @@
                                         <option value="AQ">Antarctica</option>
                                     </select>
                                 </div>
-                            </div>
+                            </div> --}}
                             <!--end col-->
                             <div class="col-12">
                                 <div class="form-group position-relative">
-                                    <label>Phone <span class="text-danger">*</span></label>
+                                    <label>No Telepon <span class="text-danger">*</span></label>
                                     <input type="text" name="phone" id="phone" class="form-control"
-                                        placeholder="State Name :">
+                                        value="{{ Auth::user()->tlp }}">
                                 </div>
                             </div>
                             <!--end col-->
                             <div class="col-12">
                                 <div class="form-group position-relative">
-                                    <label>Your Email <span class="text-danger">*</span></label>
+                                    <label>Email <span class="text-danger">*</span></label>
                                     <input name="email" id="email" type="email" class="form-control"
-                                        placeholder="Your email :">
+                                        value="{{ Auth::user()->email }}">
                                 </div>
                             </div>
                             <!--end col-->
@@ -120,30 +87,11 @@
                     <!--end form-->
                 </div>
 
-                <div class="form-check form-check-inline my-4">
-                    <div class="form-group mb-0">
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="newaccount">
-                            <label class="custom-control-label" for="newaccount">Create an account ?</label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="rounded shadow-lg p-4">
-                    <div class="form-check form-check-inline">
-                        <div class="form-group">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="addnewaddress">
-                                <label class="custom-control-label" for="addnewaddress">Ship to a different address
-                                    ?</label>
-                            </div>
-                        </div>
-                    </div>
-
+                <div class="rounded shadow-lg p-4 mt-5">
                     <div class="form-group position-relative">
-                        <label>Comments</label>
+                        <label>Komentar <span class="text-muted">(Opsional)</span></label>
                         <textarea name="comments" id="comments" rows="4" class="form-control"
-                            placeholder="Notes about your order :"></textarea>
+                            placeholder="Berikan komentar tentang pesanan anda"></textarea>
                     </div>
                 </div>
             </div>
@@ -152,15 +100,16 @@
             <div class="col-lg-5 col-md-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
                 <div class="rounded shadow-lg p-4">
                     <div class="d-flex mb-4 justify-content-between">
-                        <h5>4 Items</h5>
-                        <a href="shop-cart.html" class="text-muted h6">Show Details</a>
+                        <h5>{{ $product }} Varian</h5>
+                        <a href="{{ route('cart') }}" class="text-muted h6">Lihat Detail</a>
                     </div>
                     <div class="table-responsive">
                         <table class="table table-center table-padding mb-0">
                             <tbody>
                                 <tr>
                                     <td class="h6 border-0">Subtotal</td>
-                                    <td class="text-center font-weight-bold border-0">$ 2409</td>
+                                    <td class="text-center font-weight-bold border-0">Rp. {{ number_format($subtotal) }}
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td class="h6">Shipping Charge</td>
@@ -168,7 +117,8 @@
                                 </tr>
                                 <tr class="bg-light">
                                     <td class="h5 font-weight-bold">Total</td>
-                                    <td class="text-center text-primary h4 font-weight-bold">$ 2409</td>
+                                    <td class="text-center text-primary h4 font-weight-bold">Rp.
+                                        {{ number_format($total) }}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -179,7 +129,7 @@
                                     <div class="form-group mb-0">
                                         <input type="radio" id="banktransfer" checked="checked" name="customRadio"
                                             class="custom-control-input">
-                                        <label class="custom-control-label" for="banktransfer">Bank Transfer</label>
+                                        <label class="custom-control-label" for="banktransfer">Gopay</label>
                                     </div>
                                 </div>
                             </li>
@@ -189,7 +139,7 @@
                                     <div class="form-group mb-0">
                                         <input type="radio" id="chaquepayment" name="customRadio"
                                             class="custom-control-input">
-                                        <label class="custom-control-label" for="chaquepayment">Cheque Payment</label>
+                                        <label class="custom-control-label" for="chaquepayment">OVO</label>
                                     </div>
                                 </div>
                             </li>
@@ -199,7 +149,7 @@
                                     <div class="form-group mb-0">
                                         <input type="radio" id="cashpayment" name="customRadio"
                                             class="custom-control-input">
-                                        <label class="custom-control-label" for="cashpayment">Cash on Delivery</label>
+                                        <label class="custom-control-label" for="cashpayment">Link Aja</label>
                                     </div>
                                 </div>
                             </li>
@@ -217,7 +167,7 @@
                         </ul>
 
                         <div class="mt-4 pt-2">
-                            <a href="shop-checkouts.html" class="btn btn-block btn-primary">Place Order</a>
+                            <a href="shop-checkouts.html" class="btn btn-block btn-primary">Request Order</a>
                         </div>
                     </div>
                 </div>
