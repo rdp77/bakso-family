@@ -121,7 +121,7 @@
                                     <img src="images/shop/product/s-1.jpg" class="img-fluid" alt="">
                                 </a> --}}
                                 <ul class="list-unstyled shop-icons">
-                                    <li class="mt-2"><a href="{{ route('addProduct') }}"
+                                    <li class="mt-2"><a href="/add/{{ $p->id }}"
                                             class="btn btn-icon btn-pills btn-soft-warning"><svg
                                                 xmlns="https://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"

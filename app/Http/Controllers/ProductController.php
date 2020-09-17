@@ -92,17 +92,17 @@ class ProductController extends Controller
         return redirect('/product');
     }
 
-    public function addProduct(Request $req)
+    public function addProduct($id)
     {
         // Quick Usage with the Product Model Association & User session binding
-
-        $Product = Product::find($req->id); // assuming you have a Product model with id, name, description & price
-        $rowId = 456; // generate a unique() row ID
+        $product = Product::find($id); // assuming you have a Product model with id, name, description & price
+        // dd($product->price);
+        // $rowId = 456; // generate a unique() row ID
         $userID = Auth::user()->id; // the user ID to bind the cart contents
 
-        $id = '2';
-        $name = 'asd';
-        $price = '2000';
+        // $id = '2';
+        // $name = 'asd';
+        // $price = '2000';
         $qty = '3';
         // dd($id, $name, $price);
 
@@ -113,23 +113,36 @@ class ProductController extends Controller
         //     'price' => $price,
         //     'quantity' => 4,
         // ));
-        \Cart::session($userID)->add($id, $name, $price, $qty);
+        \Cart::session($userID)->add(array(
+            'id' => $id,
+            'name' => $product->name,
+            'price' => $product->price,
+            'quantity' => $qty,
+            'associatedModel' => $product
+        ));
         return redirect('/shop');
     }
     public function cart()
     {
-        // view the cart items
+        // View Cart
         $items = \Cart::session(Auth::user()->id)->getContent();
         $product = $items->count();
         $subtotal = \Cart::getSubTotal();
         $total = \Cart::getTotal();
-        // foreach ($items as $row) {
-
-        //     echo $row->id; // row ID
-        //     echo $row->name;
-        //     echo $row->qty;
-        //     echo $row->price;
-        // }
-        return view('pages.cart', ['items' => $items, 'product' => $product, 'subtotal' => $subtotal, 'total' => $total]);
+        return view('pages.cart', [
+            'items' => $items, 'product' => $product, 'subtotal' => $subtotal,
+            'total' => $total,
+        ]);
+    }
+    public function removeProduct($id)
+    {
+        \Cart::session(Auth::user()->id)->remove($id);
+        return redirect('/cart');
+    }
+    public function clearCart()
+    {
+        \Cart::clear();
+        \Cart::session(Auth::user()->id)->clear();
+        return redirect('/cart');
     }
 }

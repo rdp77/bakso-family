@@ -30,10 +30,10 @@
                         <tbody>
                             @foreach ($items as $i)
                             <tr>
-                                <td class="h6"><a href="javascript:void(0)" class="text-danger">X</a></td>
+                                <td class="h6"><a href="/remove/{{ $i->id }}" class="text-danger">X</a></td>
                                 <td>
                                     <div class="d-flex align-items-center">
-                                        <img src="images/shop/product/s1.jpg"
+                                        <img src="{{ asset('storage/product/'.$i->associatedModel->image) }}"
                                             class="img-fluid avatar avatar-small rounded shadow" style="height:auto;"
                                             alt="">
                                         <h6 class="mb-0 ml-3">{{ $i->name }}</h6>
@@ -43,12 +43,12 @@
                                 <td class="text-center">
                                     <input type="button" value="-"
                                         class="minus btn btn-icon btn-soft-primary font-weight-bold">
-                                    <input type="text" step="1" min="1" name="quantity" value="{{ $i->qty }}"
+                                    <input type="text" step="1" min="1" name="quantity" value="{{ $i->quantity }}"
                                         title="Qty" class="btn btn-icon btn-soft-primary font-weight-bold">
                                     <input type="button" value="+"
                                         class="plus btn btn-icon btn-soft-primary font-weight-bold">
                                 </td>
-                                <td class="text-center font-weight-bold">$510.00</td>
+                                <td class="text-center font-weight-bold">Rp. {{ number_format($i->getPriceSum()) }}</td>
                             </tr>
                             @endforeach
                         </tbody>
@@ -60,7 +60,7 @@
         <!--end row-->
         <div class="row">
             <div class="col-lg-8 col-md-6 mt-4 pt-2">
-                <a href="javascript:void(0)" class="btn btn-primary">Belanja Lagi</a>
+                <a href="{{ route('clearCart') }}" class="btn btn-primary">Hapus Keranjang</a>
                 <a href="javascript:void(0)" class="btn btn-soft-primary ml-2">Update Keranjang</a>
             </div>
             <div class="col-lg-4 col-md-6 ml-auto mt-4 pt-2">
@@ -69,7 +69,7 @@
                         <tbody>
                             <tr>
                                 <td class="h6">Subtotal</td>
-                                <td class="text-center font-weight-bold">Rp. {{ $subtotal }}</td>
+                                <td class="text-center font-weight-bold">Rp. {{ number_format($subtotal) }}</td>
                             </tr>
                             <tr>
                                 <td class="h6">Taxes</td>
@@ -77,7 +77,7 @@
                             </tr>
                             <tr class="bg-light">
                                 <td class="h6">Total</td>
-                                <td class="text-center font-weight-bold">Rp. {{ $total }}</td>
+                                <td class="text-center font-weight-bold">Rp. {{ number_format($total) }}</td>
                             </tr>
                         </tbody>
                     </table>

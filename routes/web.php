@@ -23,7 +23,9 @@ Route::get('/shop', 'DefaultController@shop')->name('shop');
 
 // Shop
 Route::get('/cart', 'ProductController@cart')->name('cart');
-Route::get('/add', 'ProductController@addProduct')->name('addProduct');
+Route::get('/clearcart', 'ProductController@clearCart')->name('clearCart');
+Route::get('/add/{id}', 'ProductController@addProduct')->name('addProduct');
+Route::get('/remove/{id}', 'ProductController@removeProduct')->name('removeProduct');
 Route::get('/checkout', function () {
     return view('pages.checkout');
 })->name('checkout');
