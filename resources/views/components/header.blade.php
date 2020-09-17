@@ -28,13 +28,13 @@
         <div id="navigation">
             <!-- Navigation Menu-->
             <ul class="navigation-menu nav-right">
-                <li><a href="/">Beranda</a></li>
+                <li><a href="/">{{ __('Beranda') }}</a></li>
                 <li class="has-submenu">
-                    <a href="javascript:void(0)">Akun</a><span class="menu-arrow"></span>
+                    <a href="javascript:void(0)">{{ __('Akun') }}</a><span class="menu-arrow"></span>
                     <ul class="submenu">
                         @guest
-                        <li><a href="{{ route('login') }}">Masuk</a></li>
-                        <li><a href="{{ route('register') }}">Daftar</a></li>
+                        <li><a href="{{ route('login') }}">{{ __('Masuk') }}</a></li>
+                        <li><a href="{{ route('register') }}">{{ __('Daftar') }}</a></li>
                         @else
                         <li><a href="{{ route('profile') }}">{{ __('Profil') }}</a></li>
                         <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
@@ -48,6 +48,15 @@
                         @endguest
                     </ul>
                 </li>
+                @if (Auth::check())
+                <li class="has-submenu">
+                    <a href="javascript:void(0)">{{ __('Pembelian') }}</a><span class="menu-arrow"></span>
+                    <ul class="submenu">
+                        <li><a href="{{ route('statusUser') }}">{{ __('Status') }}</a></li>
+                        <li><a href="{{ route('historyUser') }}">{{ __('Riwayat') }}</a></li>
+                    </ul>
+                </li>
+                @endif
                 <li><a href="{{ route('contact') }}">Kontak</a></li>
             </ul>
             <!--end navigation menu-->

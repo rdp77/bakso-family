@@ -60,8 +60,8 @@
         <!--end row-->
         <div class="row">
             <div class="col-lg-8 col-md-6 mt-4 pt-2">
-                <a href="{{ route('clearCart') }}" class="btn btn-primary">Hapus Keranjang</a>
-                <a href="javascript:void(0)" class="btn btn-soft-primary ml-2">Update Keranjang</a>
+                <a href="{{ route('clearCart') }}" class="btn btn-primary">Hapus Semua</a>
+                <a href="javascript:void(0)" class="btn btn-soft-primary ml-2">Perbarui Keranjang</a>
             </div>
             <div class="col-lg-4 col-md-6 ml-auto mt-4 pt-2">
                 <div class="table-responsive bg-white rounded shadow">

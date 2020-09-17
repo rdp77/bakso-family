@@ -1,15 +1,18 @@
-@extends('layouts.user')
+@extends('layouts.content')
 
-@section('title', __('Bakso Family | User Settings'))
+@section('title', __('Bakso Family | Purchase History'))
+@section('titleContent', __('Riwayat'))
+@section('breadcrumb')
+<li class="breadcrumb-item"><a href="javascript:void(0)">{{ __('Pembelian') }}</a></li>
+@endsection
 @section('content')
-@include('components.profile')
 
 <!-- Profile Start -->
-<section class="section mt-60">
+<section class="section">
     <div class="container mt-lg-3">
         <div class="card border-0 rounded shadow">
             <div class="card-body">
-                <h5 class="text-md-left text-center">Riwayat Pemesanan :</h5>
+                <h5 class="text-md-left text-center">{{ __('Riwayat Pembelian :') }}</h5>
 
                 <div class="media key-feature align-items-center p-3 rounded shadow mt-4">
                     <div class="media-body content ml-3">

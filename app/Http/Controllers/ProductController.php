@@ -103,7 +103,7 @@ class ProductController extends Controller
         // $id = '2';
         // $name = 'asd';
         // $price = '2000';
-        $qty = '3';
+        $qty = '1';
         // dd($id, $name, $price);
 
         // add the product to cart
