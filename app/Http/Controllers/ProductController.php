@@ -7,6 +7,7 @@ use App\Product;
 use Cookie;
 use Darryldecode\Cart\CartCondition;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 
 class ProductController extends Controller
 {
@@ -42,6 +43,8 @@ class ProductController extends Controller
             'name' => 'required',
             'price' => 'required',
             'image' => 'image|mimes:png,jpg,jpeg,svg|max:2000',
+            'desc' => 'required',
+            'list' => 'required',
         ]);
 
         $id = Product::max('id') + 1;
@@ -58,8 +61,11 @@ class ProductController extends Controller
 
         Product::create([
             'name' => $req->name,
+            'slug' => Str::slug($req->name),
             'price' => $newprice,
             'image' => $fileName,
+            'desc' => $req->desc,
+            'list' => $req->list
         ]);
 
         return redirect('/product');
@@ -128,10 +134,11 @@ class ProductController extends Controller
         $items = \Cart::session(Auth::user()->id)->getContent();
         $product = $items->count();
         $subtotal = \Cart::getSubTotal();
-        $total = \Cart::getTotal();
+        $tax = $subtotal * 10 / 100;
+        $total = \Cart::getTotal() - $tax;
         return view('pages.cart', [
             'items' => $items, 'product' => $product, 'subtotal' => $subtotal,
-            'total' => $total,
+            'total' => $total, 'tax' => $tax
         ]);
     }
     public function removeProduct($id)

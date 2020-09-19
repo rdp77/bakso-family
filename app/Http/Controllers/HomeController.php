@@ -40,10 +40,11 @@ class HomeController extends Controller
         $items = \Cart::session(Auth::user()->id)->getContent();
         $product = $items->count();
         $subtotal = \Cart::getSubTotal();
-        $total = \Cart::getTotal();
+        $tax = $subtotal * 10 / 100;
+        $total = \Cart::getTotal() - $tax;
         return view('pages.checkout', [
             'items' => $items, 'product' => $product, 'subtotal' => $subtotal,
-            'total' => $total,
+            'total' => $total, 'tax' => $tax
         ]);
     }
 }

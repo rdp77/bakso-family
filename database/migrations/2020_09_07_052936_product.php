@@ -16,8 +16,11 @@ class Product extends Migration
         Schema::create('product', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('slug');
             $table->integer('price');
             $table->string('image')->nullable();
+            $table->string('desc');
+            $table->string('list');
         });
     }
 

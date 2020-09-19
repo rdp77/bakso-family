@@ -72,8 +72,8 @@
                                 <td class="text-center font-weight-bold">Rp. {{ number_format($subtotal) }}</td>
                             </tr>
                             <tr>
-                                <td class="h6">Taxes</td>
-                                <td class="text-center font-weight-bold">$ 219</td>
+                                <td class="h6">Pajak</td>
+                                <td class="text-center font-weight-bold">Rp. {{ number_format($tax) }}</td>
                             </tr>
                             <tr class="bg-light">
                                 <td class="h6">Total</td>
@@ -83,7 +83,7 @@
                     </table>
                 </div>
                 <div class="mt-4 pt-2 text-right">
-                    <a href="{{ route('checkout') }}" class="btn btn-primary">Lanjut ke Pembayaran</a>
+                    <a href="{{ route('checkout') }}" class="btn btn-primary">Lanjut Ke Pembayaran</a>
                 </div>
             </div>
             <!--end col-->

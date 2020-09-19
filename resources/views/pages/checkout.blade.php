@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-lg-7 col-md-6">
                 <div class="rounded shadow-lg p-4">
-                    <h5 class="mb-0">Billing Details :</h5>
+                    <h5 class="mb-0">Detail Tagihan :</h5>
 
                     <form class="mt-4">
                         <div class="row">
@@ -112,8 +112,8 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="h6">Shipping Charge</td>
-                                    <td class="text-center font-weight-bold">$ 0.00</td>
+                                    <td class="h6">Pajak</td>
+                                    <td class="text-center font-weight-bold">Rp. {{ number_format($tax) }}</td>
                                 </tr>
                                 <tr class="bg-light">
                                     <td class="h5 font-weight-bold">Total</td>
@@ -154,7 +154,7 @@
                                 </div>
                             </li>
 
-                            <li class="mt-3">
+                            {{-- <li class="mt-3">
                                 <div class="custom-control custom-radio custom-control-inline">
                                     <div class="form-group mb-0">
                                         <input type="radio" id="paypal" name="customRadio" class="custom-control-input">
@@ -163,11 +163,11 @@
                                                 target="_blank" class="ml-2 text-primary">What is paypal?</a></label>
                                     </div>
                                 </div>
-                            </li>
+                            </li> --}}
                         </ul>
 
                         <div class="mt-4 pt-2">
-                            <a href="shop-checkouts.html" class="btn btn-block btn-primary">Request Order</a>
+                            <a href="shop-checkouts.html" class="btn btn-block btn-primary">Minta Pesanan</a>
                         </div>
                     </div>
                 </div>

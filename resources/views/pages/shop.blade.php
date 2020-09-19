@@ -25,9 +25,9 @@
                                             alt="">
                                     </a>
                                     <div class="content ml-3">
-                                        <a href="javascript:void(0)" class="text-dark h6">T-Shirt</a>
-                                        <h6 class="text-muted small font-italic mb-0 mt-1">$18.00 <del
-                                                class="text-danger ml-2">$22.00</del> </h6>
+                                        <a href="javascript:void(0)" class="text-dark h6">Bakso1</a>
+                                        <h6 class="text-muted small font-italic mb-0 mt-1">Rp. 5.000<del
+                                                class="text-danger ml-2">Rp. 10.000</del> </h6>
                                     </div>
                                 </li>
                                 <li class="media align-items-center mt-2">
@@ -37,9 +37,9 @@
                                             alt="">
                                     </a>
                                     <div class="content ml-3">
-                                        <a href="javascript:void(0)" class="text-dark h6">Watch</a>
-                                        <h6 class="text-muted small font-italic mb-0 mt-1">$18.00 <del
-                                                class="text-danger ml-2">$22.00</del> </h6>
+                                        <a href="javascript:void(0)" class="text-dark h6">Bakso2</a>
+                                        <h6 class="text-muted small font-italic mb-0 mt-1">Rp. 10.000<del
+                                                class="text-danger ml-2">Rp. 15.000</del> </h6>
                                     </div>
                                 </li>
                                 <li class="media align-items-center mt-2">
@@ -49,9 +49,9 @@
                                             alt="">
                                     </a>
                                     <div class="content ml-3">
-                                        <a href="javascript:void(0)" class="text-dark h6">Coffee Cup</a>
-                                        <h6 class="text-muted small font-italic mb-0 mt-1">$18.00 <del
-                                                class="text-danger ml-2">$22.00</del> </h6>
+                                        <a href="javascript:void(0)" class="text-dark h6">Bakso3</a>
+                                        <h6 class="text-muted small font-italic mb-0 mt-1">Rp. 3.000 <del
+                                                class="text-danger ml-2">Rp. 5.000</del> </h6>
                                     </div>
                                 </li>
                                 <li class="media align-items-center mt-2">
@@ -61,9 +61,9 @@
                                             alt="">
                                     </a>
                                     <div class="content ml-3">
-                                        <a href="javascript:void(0)" class="text-dark h6">Wooden Stools</a>
-                                        <h6 class="text-muted small font-italic mb-0 mt-1">$18.00 <del
-                                                class="text-danger ml-2">$22.00</del> </h6>
+                                        <a href="javascript:void(0)" class="text-dark h6">Bakso4</a>
+                                        <h6 class="text-muted small font-italic mb-0 mt-1">Rp. 11.000 <del
+                                                class="text-danger ml-2">Rp. 7.000</del> </h6>
                                     </div>
                                 </li>
                                 @endif
@@ -78,7 +78,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-9 col-md-7">
                         <div class="section-title">
-                            <h5 class="mb-0">{{ $total }} Varian Bakso</h5>
+                            <h5 class="mb-0">{{ $total . __(' Varian Bakso')}}</h5>
                         </div>
                     </div>
                     <!--end col-->
@@ -133,6 +133,15 @@
                                                     d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6">
                                                 </path>
                                             </svg></a></li>
+                                    <li class="mt-2"><a href="/detail/{{ $p->slug }}"
+                                            class="btn btn-icon btn-pills btn-soft-primary"><svg
+                                                xmlns="https://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-eye icons">
+                                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                                <circle cx="12" cy="12" r="3"></circle>
+                                            </svg></a></li>
                                 </ul>
                             </div>
                             <div class="card-body content pt-4 p-2">
@@ -140,9 +149,9 @@
                                 <div class="d-flex justify-content-between mt-1">
                                     <h6 class="text-muted small font-italic mb-0 mt-1">
                                         @if (number_format($p->price) == "0")
-                                        GRATIS
+                                        {{ __('GRATIS') }}
                                         @else
-                                        Rp.{{ number_format($p->price) }} @endif
+                                        {{ __('Rp. ') . number_format($p->price) }} @endif
                                     </h6>
                                 </div>
                             </div>

@@ -31,15 +31,6 @@
                                     <!--end col-->
                                     <div class="col-md-5 text-md-right text-center">
                                         <ul class="list-unstyled social-icon social mb-0 mt-4">
-                                            <li class="list-inline-item"><a href="{{ route('statusUser') }}"
-                                                    class="rounded" data-toggle="tooltip" data-placement="bottom"
-                                                    title="Status"><i data-feather="info"
-                                                        class="fea icon-sm fea-social"></i></a>
-                                            </li>
-                                            <li class="list-inline-item"><a href="{{ route('historyUser') }}"
-                                                    class="rounded" data-toggle="tooltip" data-placement="bottom"
-                                                    title="Riwayat"><i data-feather="rotate-ccw"
-                                                        class="fea icon-sm fea-social"></i></a></li>
                                             <li class="list-inline-item"><a href="{{ route('passwordUser') }}"
                                                     class="rounded" data-toggle="tooltip" data-placement="bottom"
                                                     title="Ubah Password"><i data-feather="key"

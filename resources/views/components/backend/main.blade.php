@@ -27,7 +27,7 @@
                             <h4>Pemasukan</h4>
                         </div>
                         <div class="card-body">
-                            $187,13
+                            Rp. 50.000
                         </div>
                     </div>
                 </div>

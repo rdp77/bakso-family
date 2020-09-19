@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Product;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,7 @@ Route::get('/clearcart', 'ProductController@clearCart')->name('clearCart');
 Route::get('/add/{id}', 'ProductController@addProduct')->name('addProduct');
 Route::get('/remove/{id}', 'ProductController@removeProduct')->name('removeProduct');
 Route::get('/checkout', 'HomeController@checkOut')->name('checkout');
+Route::get('/detail/{id:slug}', 'DefaultController@show');
 
 Auth::routes();
 
@@ -51,7 +53,6 @@ Route::group(['middleware' => 'roles'], function () {
     Route::get('/product/edit/{id}', 'ProductController@edit');
     Route::put('/product/update/{id}', 'ProductController@update');
     Route::get('/product/delete/{id}', 'ProductController@delete');
-
     // User
     Route::get('/user', 'UserController@index')->name('user');
     Route::get('/user/create', 'UserController@create')->name('createUser');

@@ -10,6 +10,11 @@ class Product extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'name', 'price', 'image',
+        'name', 'price', 'image', 'slug', 'desc', 'list'
     ];
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

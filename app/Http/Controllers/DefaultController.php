@@ -21,6 +21,13 @@ class DefaultController extends Controller
         }
     }
 
+    public function show(Product $id)
+    {
+        // return $id;
+        $list = explode(",", $id->list);
+        return view('pages.shopDetails', ['product' => $id, 'list' => $list]);
+    }
+
     public function contact()
     {
         return view('pages.contact');

@@ -61,7 +61,7 @@
             </ul>
             <!--end navigation menu-->
             <div class="buy-menu-btn d-none">
-                <a href="{{ route('shop') }}" class="btn btn-primary">Buy Now</a>
+                <a href="{{ route('shop') }}" class="btn btn-primary">{{ __('Buy Now') }}</a>
             </div>
             <!--end login button-->
         </div>
