@@ -1,7 +1,7 @@
 <section class="main-slider">
     <ul class="slides">
         <li class="bg-slider slider-rtl-2 d-flex align-items-center"
-            style="background:url('{{ asset('storage/images/bakso.jpeg') }}') center/cover no-repeat;">
+            style="background:url('{{ asset('storage/images/bg1.jpg') }}') center/cover no-repeat;">
             <div class="container">
                 <div class="row align-items-center mt-5">
                     <div class="col-lg-7 col-md-7">

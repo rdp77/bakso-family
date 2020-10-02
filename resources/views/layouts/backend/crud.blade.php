@@ -13,12 +13,12 @@
     <link rel="stylesheet preload" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- Main Css -->
-    {{-- <link rel="stylesheet" href="{{ asset('css/backend.css') }}"> --}}
-    <link rel="stylesheet" href="https://demo.getstisla.com/assets/modules/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet"
-        href="https://demo.getstisla.com/assets/modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
-    <link rel="stylesheet" href="https://demo.getstisla.com/assets/css/style.css">
-    <link rel="stylesheet" href="https://demo.getstisla.com/assets/css/components.css">
+    <link rel="stylesheet" href="{{ asset('css/backend.css') }}">
+    {{-- <link rel="stylesheet" href="https://demo.getstisla.com/assets/modules/bootstrap/css/bootstrap.min.css"> --}}
+    {{-- <link rel="stylesheet"
+        href="https://demo.getstisla.com/assets/modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.css"> --}}
+    {{-- <link rel="stylesheet" href="https://demo.getstisla.com/assets/css/style.css">
+    <link rel="stylesheet" href="https://demo.getstisla.com/assets/css/components.css"> --}}
 </head>
 
 <body>

@@ -74,8 +74,8 @@
             </div> --}}
             <div class="form-group">
                 <label for="list">Isian</label>
-                <input id="list" type="text" class="form-control @error('list') is-invalid @enderror" name="list"
-                    required>
+                <input id="list" type="text" class="form-control inputtags @error('list') is-invalid @enderror"
+                    name="list" required>
                 @error('list')
                 <span class="text-danger" role="alert">
                     {{ $message }}
@@ -92,7 +92,7 @@
 @endsection
 @section('script')
 <script type="text/javascript">
-    $("#list").tagsinput('items');
+    $(".inputtags").tagsinput('items');
 var cleaveC = new Cleave('.currency', {
 numeral: true,
 numeralThousandsGroupStyle: 'thousand'
